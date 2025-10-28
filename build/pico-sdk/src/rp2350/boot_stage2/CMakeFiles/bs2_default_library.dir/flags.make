@@ -6,5 +6,5 @@ ASM_DEFINES =
 
 ASM_INCLUDES = 
 
-ASM_FLAGS = -g
+ASM_FLAGS = -mcpu=cortex-m33 -mthumb -march=armv8-m.main+fp+dsp -mfloat-abi=softfp -mcmse -Og -g
 

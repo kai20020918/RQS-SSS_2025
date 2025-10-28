@@ -72,7 +72,7 @@ include pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/flags.make
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o: pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/flags.make
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o: /home/pico2/pico-sdk/src/rp2350/boot_stage2/compile_time_choice.S
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pico2/RQS-SSS_2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o"
-	cd /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/bs2_default.dir/compile_time_choice.S.o -c /home/pico2/pico-sdk/src/rp2350/boot_stage2/compile_time_choice.S
+	cd /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2 && /usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/bs2_default.dir/compile_time_choice.S.o   -c /home/pico2/pico-sdk/src/rp2350/boot_stage2/compile_time_choice.S
 
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/bs2_default.dir/compile_time_choice.S.i"

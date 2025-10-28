@@ -40,8 +40,6 @@
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/hardware_structs/CMakeFiles/edit_cache.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/hardware_structs/CMakeFiles/rebuild_cache.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir
-/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolForceReconfigure.dir
-/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/edit_cache.dir

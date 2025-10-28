@@ -1,0 +1,6 @@
+# CMake build output
+build/
+.vscode/
+
+# IDE generated files
+# ... 他に必要な除外ファイル

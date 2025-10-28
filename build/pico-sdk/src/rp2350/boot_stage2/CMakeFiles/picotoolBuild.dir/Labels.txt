@@ -1,0 +1,14 @@
+# Target labels
+ picotoolBuild
+# Source files and their labels
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/CMakeFiles/picotoolBuild-complete.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule
+/home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2350/boot_stage2/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule

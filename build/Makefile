@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rqs_sss
+# Target rules for targets named RQS-SSS_2025
 
 # Build rule for target.
-rqs_sss: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rqs_sss
-.PHONY : rqs_sss
+RQS-SSS_2025: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RQS-SSS_2025
+.PHONY : RQS-SSS_2025
 
 # fast build rule for target.
-rqs_sss/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/build
-.PHONY : rqs_sss/fast
+RQS-SSS_2025/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/build
+.PHONY : RQS-SSS_2025/fast
 
 #=============================================================================
 # Target rules for targets named bs2_default
@@ -207,12 +207,457 @@ pico_status_led_ws2812_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/build
 .PHONY : pico_status_led_ws2812_pio_h/fast
 
+#=============================================================================
+# Target rules for targets named hal_lib
+
+# Build rule for target.
+hal_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal_lib
+.PHONY : hal_lib
+
+# fast build rule for target.
+hal_lib/fast:
+	$(MAKE) $(MAKESILENT) -f hal/CMakeFiles/hal_lib.dir/build.make hal/CMakeFiles/hal_lib.dir/build
+.PHONY : hal_lib/fast
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.o: home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.i: home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.s: home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o: home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.o: home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.i: home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.s: home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.o: home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.i: home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.s: home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o: home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o: home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+
+home/pico2/pico-sdk/lib/tinyusb/src/tusb.o: home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/tusb.o
+
+# target to build an object file
+home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.o
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.o
+
+home/pico2/pico-sdk/lib/tinyusb/src/tusb.i: home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/tusb.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.i
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.i
+
+home/pico2/pico-sdk/lib/tinyusb/src/tusb.s: home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/tusb.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.s
+.PHONY : home/pico2/pico-sdk/lib/tinyusb/src/tusb.c.s
+
 home/pico2/pico-sdk/src/common/hardware_claim/claim.o: home/pico2/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/pico2/pico-sdk/src/common/hardware_claim/claim.o
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/hardware_claim/claim.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/hardware_claim/claim.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/pico2/pico-sdk/src/common/hardware_claim/claim.c.o
 
 home/pico2/pico-sdk/src/common/hardware_claim/claim.i: home/pico2/pico-sdk/src/common/hardware_claim/claim.c.i
@@ -220,7 +665,7 @@ home/pico2/pico-sdk/src/common/hardware_claim/claim.i: home/pico2/pico-sdk/src/c
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/hardware_claim/claim.c.i
 .PHONY : home/pico2/pico-sdk/src/common/hardware_claim/claim.c.i
 
 home/pico2/pico-sdk/src/common/hardware_claim/claim.s: home/pico2/pico-sdk/src/common/hardware_claim/claim.c.s
@@ -228,7 +673,7 @@ home/pico2/pico-sdk/src/common/hardware_claim/claim.s: home/pico2/pico-sdk/src/c
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/hardware_claim/claim.c.s
 .PHONY : home/pico2/pico-sdk/src/common/hardware_claim/claim.c.s
 
 home/pico2/pico-sdk/src/common/pico_sync/critical_section.o: home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.o
@@ -236,7 +681,7 @@ home/pico2/pico-sdk/src/common/pico_sync/critical_section.o: home/pico2/pico-sdk
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.o
 
 home/pico2/pico-sdk/src/common/pico_sync/critical_section.i: home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -244,7 +689,7 @@ home/pico2/pico-sdk/src/common/pico_sync/critical_section.i: home/pico2/pico-sdk
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 home/pico2/pico-sdk/src/common/pico_sync/critical_section.s: home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -252,7 +697,7 @@ home/pico2/pico-sdk/src/common/pico_sync/critical_section.s: home/pico2/pico-sdk
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 home/pico2/pico-sdk/src/common/pico_sync/lock_core.o: home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.o
@@ -260,7 +705,7 @@ home/pico2/pico-sdk/src/common/pico_sync/lock_core.o: home/pico2/pico-sdk/src/co
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.o
 
 home/pico2/pico-sdk/src/common/pico_sync/lock_core.i: home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -268,7 +713,7 @@ home/pico2/pico-sdk/src/common/pico_sync/lock_core.i: home/pico2/pico-sdk/src/co
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 home/pico2/pico-sdk/src/common/pico_sync/lock_core.s: home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -276,7 +721,7 @@ home/pico2/pico-sdk/src/common/pico_sync/lock_core.s: home/pico2/pico-sdk/src/co
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 home/pico2/pico-sdk/src/common/pico_sync/mutex.o: home/pico2/pico-sdk/src/common/pico_sync/mutex.c.o
@@ -284,7 +729,7 @@ home/pico2/pico-sdk/src/common/pico_sync/mutex.o: home/pico2/pico-sdk/src/common
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_sync/mutex.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/mutex.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/mutex.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/mutex.c.o
 
 home/pico2/pico-sdk/src/common/pico_sync/mutex.i: home/pico2/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -292,7 +737,7 @@ home/pico2/pico-sdk/src/common/pico_sync/mutex.i: home/pico2/pico-sdk/src/common
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/mutex.c.i
 
 home/pico2/pico-sdk/src/common/pico_sync/mutex.s: home/pico2/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -300,7 +745,7 @@ home/pico2/pico-sdk/src/common/pico_sync/mutex.s: home/pico2/pico-sdk/src/common
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/mutex.c.s
 
 home/pico2/pico-sdk/src/common/pico_sync/sem.o: home/pico2/pico-sdk/src/common/pico_sync/sem.c.o
@@ -308,7 +753,7 @@ home/pico2/pico-sdk/src/common/pico_sync/sem.o: home/pico2/pico-sdk/src/common/p
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_sync/sem.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/sem.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/sem.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/sem.c.o
 
 home/pico2/pico-sdk/src/common/pico_sync/sem.i: home/pico2/pico-sdk/src/common/pico_sync/sem.c.i
@@ -316,7 +761,7 @@ home/pico2/pico-sdk/src/common/pico_sync/sem.i: home/pico2/pico-sdk/src/common/p
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/sem.c.i
 
 home/pico2/pico-sdk/src/common/pico_sync/sem.s: home/pico2/pico-sdk/src/common/pico_sync/sem.c.s
@@ -324,7 +769,7 @@ home/pico2/pico-sdk/src/common/pico_sync/sem.s: home/pico2/pico-sdk/src/common/p
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_sync/sem.c.s
 
 home/pico2/pico-sdk/src/common/pico_time/time.o: home/pico2/pico-sdk/src/common/pico_time/time.c.o
@@ -332,7 +777,7 @@ home/pico2/pico-sdk/src/common/pico_time/time.o: home/pico2/pico-sdk/src/common/
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_time/time.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_time/time.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_time/time.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_time/time.c.o
 
 home/pico2/pico-sdk/src/common/pico_time/time.i: home/pico2/pico-sdk/src/common/pico_time/time.c.i
@@ -340,7 +785,7 @@ home/pico2/pico-sdk/src/common/pico_time/time.i: home/pico2/pico-sdk/src/common/
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_time/time.c.i
 
 home/pico2/pico-sdk/src/common/pico_time/time.s: home/pico2/pico-sdk/src/common/pico_time/time.c.s
@@ -348,7 +793,7 @@ home/pico2/pico-sdk/src/common/pico_time/time.s: home/pico2/pico-sdk/src/common/
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_time/time.c.s
 
 home/pico2/pico-sdk/src/common/pico_time/timeout_helper.o: home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.o
@@ -356,7 +801,7 @@ home/pico2/pico-sdk/src/common/pico_time/timeout_helper.o: home/pico2/pico-sdk/s
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.o
 
 home/pico2/pico-sdk/src/common/pico_time/timeout_helper.i: home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -364,7 +809,7 @@ home/pico2/pico-sdk/src/common/pico_time/timeout_helper.i: home/pico2/pico-sdk/s
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 home/pico2/pico-sdk/src/common/pico_time/timeout_helper.s: home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -372,7 +817,7 @@ home/pico2/pico-sdk/src/common/pico_time/timeout_helper.s: home/pico2/pico-sdk/s
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 home/pico2/pico-sdk/src/common/pico_util/datetime.o: home/pico2/pico-sdk/src/common/pico_util/datetime.c.o
@@ -380,7 +825,7 @@ home/pico2/pico-sdk/src/common/pico_util/datetime.o: home/pico2/pico-sdk/src/com
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_util/datetime.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/datetime.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/datetime.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/datetime.c.o
 
 home/pico2/pico-sdk/src/common/pico_util/datetime.i: home/pico2/pico-sdk/src/common/pico_util/datetime.c.i
@@ -388,7 +833,7 @@ home/pico2/pico-sdk/src/common/pico_util/datetime.i: home/pico2/pico-sdk/src/com
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/datetime.c.i
 
 home/pico2/pico-sdk/src/common/pico_util/datetime.s: home/pico2/pico-sdk/src/common/pico_util/datetime.c.s
@@ -396,7 +841,7 @@ home/pico2/pico-sdk/src/common/pico_util/datetime.s: home/pico2/pico-sdk/src/com
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/datetime.c.s
 
 home/pico2/pico-sdk/src/common/pico_util/pheap.o: home/pico2/pico-sdk/src/common/pico_util/pheap.c.o
@@ -404,7 +849,7 @@ home/pico2/pico-sdk/src/common/pico_util/pheap.o: home/pico2/pico-sdk/src/common
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_util/pheap.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/pheap.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/pheap.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/pheap.c.o
 
 home/pico2/pico-sdk/src/common/pico_util/pheap.i: home/pico2/pico-sdk/src/common/pico_util/pheap.c.i
@@ -412,7 +857,7 @@ home/pico2/pico-sdk/src/common/pico_util/pheap.i: home/pico2/pico-sdk/src/common
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/pheap.c.i
 
 home/pico2/pico-sdk/src/common/pico_util/pheap.s: home/pico2/pico-sdk/src/common/pico_util/pheap.c.s
@@ -420,7 +865,7 @@ home/pico2/pico-sdk/src/common/pico_util/pheap.s: home/pico2/pico-sdk/src/common
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/pheap.c.s
 
 home/pico2/pico-sdk/src/common/pico_util/queue.o: home/pico2/pico-sdk/src/common/pico_util/queue.c.o
@@ -428,7 +873,7 @@ home/pico2/pico-sdk/src/common/pico_util/queue.o: home/pico2/pico-sdk/src/common
 
 # target to build an object file
 home/pico2/pico-sdk/src/common/pico_util/queue.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/queue.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/queue.c.o
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/queue.c.o
 
 home/pico2/pico-sdk/src/common/pico_util/queue.i: home/pico2/pico-sdk/src/common/pico_util/queue.c.i
@@ -436,7 +881,7 @@ home/pico2/pico-sdk/src/common/pico_util/queue.i: home/pico2/pico-sdk/src/common
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/queue.c.i
 
 home/pico2/pico-sdk/src/common/pico_util/queue.s: home/pico2/pico-sdk/src/common/pico_util/queue.c.s
@@ -444,7 +889,7 @@ home/pico2/pico-sdk/src/common/pico_util/queue.s: home/pico2/pico-sdk/src/common
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/pico2/pico-sdk/src/common/pico_util/queue.c.s
 
 home/pico2/pico-sdk/src/rp2350/pico_platform/platform.o: home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.o
@@ -452,7 +897,7 @@ home/pico2/pico-sdk/src/rp2350/pico_platform/platform.o: home/pico2/pico-sdk/src
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.o
 
 home/pico2/pico-sdk/src/rp2350/pico_platform/platform.i: home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.i
@@ -460,7 +905,7 @@ home/pico2/pico-sdk/src/rp2350/pico_platform/platform.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.i
 
 home/pico2/pico-sdk/src/rp2350/pico_platform/platform.s: home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.s
@@ -468,7 +913,7 @@ home/pico2/pico-sdk/src/rp2350/pico_platform/platform.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2350/pico_platform/platform.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
@@ -476,7 +921,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.o: home/pico2/pi
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
@@ -484,7 +929,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.i: home/pico2/pi
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
@@ -492,7 +937,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.s: home/pico2/pi
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
@@ -500,7 +945,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.o: home/pico2/pico-sdk
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -508,7 +953,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: home/pico2/pico-sdk
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -516,7 +961,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: home/pico2/pico-sdk
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.o
@@ -524,7 +969,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.o: home/pico2/pico-s
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.i: home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.i
@@ -532,7 +977,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.i: home/pico2/pico-s
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.s: home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.s
@@ -540,15 +985,39 @@ home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.s: home/pico2/pico-s
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.c.s
+
+home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.o
+
+# target to build an object file
+home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+
+home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.i: home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.s: home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.o
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -556,7 +1025,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -564,7 +1033,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.o: home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
@@ -572,7 +1041,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.o: home/pico2/pico-sdk/src/r
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
@@ -580,7 +1049,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/pico2/pico-sdk/src/r
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
@@ -588,7 +1057,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/pico2/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
@@ -596,7 +1065,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.o: home/pico2/pico-sdk/src/r
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -604,7 +1073,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.i: home/pico2/pico-sdk/src/r
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -612,7 +1081,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.s: home/pico2/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
@@ -620,7 +1089,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.o: home/pico2/
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
@@ -628,7 +1097,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.o: home/pico2/pico-sdk/src/r
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -636,7 +1105,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.i: home/pico2/pico-sdk/src/r
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -644,15 +1113,39 @@ home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.s: home/pico2/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+
+home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.o: home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.o
+
+# target to build an object file
+home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+
+home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+
+home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.o: home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.o
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -660,7 +1153,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -668,7 +1161,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
@@ -676,7 +1169,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.o: hom
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
@@ -684,7 +1177,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.i: hom
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
@@ -692,7 +1185,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.s: hom
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
@@ -700,7 +1193,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.o: home/pico2/pico-sdk/s
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
@@ -708,7 +1201,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.i: home/pico2/pico-sdk/s
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
@@ -716,7 +1209,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.s: home/pico2/pico-sdk/s
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
@@ -724,7 +1217,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.o: home/pico2/pico-sdk/s
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -732,7 +1225,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.i: home/pico2/pico-sdk/s
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -740,7 +1233,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.s: home/pico2/pico-sdk/s
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
@@ -748,7 +1241,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.o: home/pico2/pico-sdk/src
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -756,7 +1249,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -764,7 +1257,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
@@ -772,7 +1265,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.o: home/pico2/pico-sdk/src
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -780,7 +1273,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -788,7 +1281,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
@@ -796,7 +1289,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o: home/pico2/pico
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -804,7 +1297,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: home/pico2/pico
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -812,15 +1305,39 @@ home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: home/pico2/pico
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+
+home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o: home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o
+
+# target to build an object file
+home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.o
+
+home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i: home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.i
+
+home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s: home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.c.s
 
 home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.o: home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.o
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
 
 home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -828,7 +1345,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -836,7 +1353,7 @@ home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
@@ -844,7 +1361,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.o: home/pico2/pico-sdk/src
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
@@ -852,7 +1369,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
@@ -860,7 +1377,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_atomic/atomic.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
@@ -868,7 +1385,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.o: home/pico2/pico
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
@@ -876,7 +1393,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.o: home/pico2/pico-sdk/s
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -884,7 +1401,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: home/pico2/pico-sdk/s
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -892,7 +1409,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: home/pico2/pico-sdk/s
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
@@ -900,7 +1417,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.o: home/pico2/pico-
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
@@ -908,7 +1425,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.i: home/pico2/pico-
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
@@ -916,7 +1433,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.s: home/pico2/pico-
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
@@ -924,7 +1441,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.o: home/
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
@@ -932,7 +1449,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.i: home/
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
@@ -940,7 +1457,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.s: home/
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
@@ -948,7 +1465,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.o: home/pico2/pico-sdk/src/rp2
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
@@ -956,7 +1473,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.o: home/pico2/pic
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
@@ -964,7 +1481,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.i: home/pico2/pic
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
@@ -972,7 +1489,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.s: home/pico2/pic
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.o: home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o
@@ -980,7 +1497,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.o: home/pico2/p
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.i: home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i
@@ -988,7 +1505,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.i: home/pico2/p
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.s: home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s
@@ -996,7 +1513,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.s: home/pico2/p
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_divider/divider_compiler.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.o: home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
@@ -1004,7 +1521,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.o: home/pico2/pi
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_aeabi_dcp.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.o: home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o
@@ -1012,7 +1529,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.o: home/pico2/pic
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_conv_m33.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.o: home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o
@@ -1020,7 +1537,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.o: home/pico2/pico
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_fma_dcp.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.o: home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.o
@@ -1028,7 +1545,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.o: home/pico2/pico-sd
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.i: home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1036,7 +1553,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.i: home/pico2/pico-sd
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.s: home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1044,7 +1561,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.s: home/pico2/pico-sd
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.o: home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o
@@ -1052,15 +1569,39 @@ home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.o: home/pico2/pico
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.S.o
+
+home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o: home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o
+
+# target to build an object file
+home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
+
+home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+
+home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.o: home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.o
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.i: home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.i
@@ -1068,7 +1609,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.i: home/pico2/pico-sdk/src/r
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.s: home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.s
@@ -1076,7 +1617,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.s: home/pico2/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.o: home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o
@@ -1084,7 +1625,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.o: home/pico2/pic
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_float/float_common_m33.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.o: home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o
@@ -1092,7 +1633,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.o: home/pico2/pic
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_float/float_conv32_vfp.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.o: home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.o
@@ -1100,7 +1641,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.o: home/pico2/pico-sdk/
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.i: home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1108,7 +1649,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.i: home/pico2/pico-sdk/
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.s: home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1116,7 +1657,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.s: home/pico2/pico-sdk/
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.o: home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o
@@ -1124,7 +1665,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.o: home/pico2/pi
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_float/float_sci_m33_vfp.S.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
@@ -1132,7 +1673,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.o: home/pico2/pico-sdk/src
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
@@ -1140,7 +1681,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
@@ -1148,7 +1689,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_malloc/malloc.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.o: home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
@@ -1156,7 +1697,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.o: home/pico2/pic
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.i: home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
@@ -1164,7 +1705,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.i: home/pico2/pic
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.s: home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
@@ -1172,7 +1713,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.s: home/pico2/pic
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_platform_common/common.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
@@ -1180,7 +1721,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.o: home/pico2/pico-
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
@@ -1188,7 +1729,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.i: home/pico2/pico-
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
@@ -1196,7 +1737,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.s: home/pico2/pico-
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.o: home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.o
@@ -1204,7 +1745,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.o: home/pico2/pico-sdk/src
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.i: home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1212,7 +1753,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.s: home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1220,7 +1761,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
@@ -1228,7 +1769,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.o: home/pico2/pico-sdk/s
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1236,7 +1777,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.i: home/pico2/pico-sdk/s
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1244,7 +1785,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.s: home/pico2/pico-sdk/s
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
@@ -1252,7 +1793,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.o: home/pico2/
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
@@ -1260,7 +1801,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.i: home/pico2/
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
@@ -1268,7 +1809,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.s: home/pico2/
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
@@ -1276,7 +1817,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.o: home
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
@@ -1284,7 +1825,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.i: home
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
@@ -1292,7 +1833,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.s: home
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
@@ -1300,7 +1841,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.o:
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
@@ -1308,7 +1849,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.i:
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s: home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
@@ -1316,7 +1857,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.s:
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.o: home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
@@ -1324,7 +1865,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_inf
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.i: home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
@@ -1332,7 +1873,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_inf
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.s: home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
@@ -1340,7 +1881,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_inf
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
@@ -1348,7 +1889,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.o: home/pico2/pico-sdk/src/r
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1356,7 +1897,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.i: home/pico2/pico-sdk/src/r
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1364,39 +1905,87 @@ home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.s: home/pico2/pico-sdk/src/r
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
 
 # target to build an object file
-home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 
-home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i
 
 # target to preprocess a source file
-home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
-home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s
 
 # target to generate assembly for a file
-home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o
+
+# target to build an object file
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
+
+# target to build an object file
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
+
+# target to preprocess a source file
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
+
+# target to generate assembly for a file
+home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o: home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o
 
 # target to build an object file
 home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 
 home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1404,7 +1993,7 @@ home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: home/pico2/pico-sdk/src
 
 # target to preprocess a source file
 home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1412,32 +2001,104 @@ home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: home/pico2/pico-sdk/src
 
 # target to generate assembly for a file
 home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
-rqs_sss.o: rqs_sss.c.o
-.PHONY : rqs_sss.o
+home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o: home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o
 
 # target to build an object file
-rqs_sss.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/rqs_sss.c.o
-.PHONY : rqs_sss.c.o
+home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
 
-rqs_sss.i: rqs_sss.c.i
-.PHONY : rqs_sss.i
+home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i
 
 # target to preprocess a source file
-rqs_sss.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/rqs_sss.c.i
-.PHONY : rqs_sss.c.i
+home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
-rqs_sss.s: rqs_sss.c.s
-.PHONY : rqs_sss.s
+home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s
 
 # target to generate assembly for a file
-rqs_sss.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rqs_sss.dir/build.make CMakeFiles/rqs_sss.dir/rqs_sss.c.s
-.PHONY : rqs_sss.c.s
+home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+.PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+
+mad_gps.o: mad_gps.c.o
+.PHONY : mad_gps.o
+
+# target to build an object file
+mad_gps.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_gps.c.o
+.PHONY : mad_gps.c.o
+
+mad_gps.i: mad_gps.c.i
+.PHONY : mad_gps.i
+
+# target to preprocess a source file
+mad_gps.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_gps.c.i
+.PHONY : mad_gps.c.i
+
+mad_gps.s: mad_gps.c.s
+.PHONY : mad_gps.s
+
+# target to generate assembly for a file
+mad_gps.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_gps.c.s
+.PHONY : mad_gps.c.s
+
+mad_system.o: mad_system.c.o
+.PHONY : mad_system.o
+
+# target to build an object file
+mad_system.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_system.c.o
+.PHONY : mad_system.c.o
+
+mad_system.i: mad_system.c.i
+.PHONY : mad_system.i
+
+# target to preprocess a source file
+mad_system.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_system.c.i
+.PHONY : mad_system.c.i
+
+mad_system.s: mad_system.c.s
+.PHONY : mad_system.s
+
+# target to generate assembly for a file
+mad_system.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_system.c.s
+.PHONY : mad_system.c.s
+
+main.o: main.c.o
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -1451,9 +2112,64 @@ help:
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... pico_status_led_ws2812_pio_h"
 	@echo "... pioasmBuild"
+	@echo "... RQS-SSS_2025"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
-	@echo "... rqs_sss"
+	@echo "... hal_lib"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/class/video/video_device.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/device/usbd.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/device/usbd_control.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/tusb.o"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/tusb.i"
+	@echo "... home/pico2/pico-sdk/lib/tinyusb/src/tusb.s"
 	@echo "... home/pico2/pico-sdk/src/common/hardware_claim/claim.o"
 	@echo "... home/pico2/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/pico2/pico-sdk/src/common/hardware_claim/claim.s"
@@ -1496,6 +2212,9 @@ help:
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_divider/divider.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_flash/flash.s"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
@@ -1509,6 +2228,9 @@ help:
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_pll/pll.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_spi/spi.s"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_sync/sync.s"
@@ -1530,6 +2252,9 @@ help:
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_xip_cache/xip_cache.s"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/hardware_xosc/xosc.s"
@@ -1560,6 +2285,9 @@ help:
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_double/double_math.s"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_double/double_sci_m33.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_flash/flash.s"
@@ -1599,15 +2327,30 @@ help:
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
-	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
-	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
-	@echo "... rqs_sss.o"
-	@echo "... rqs_sss.i"
-	@echo "... rqs_sss.s"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
+	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
+	@echo "... mad_gps.o"
+	@echo "... mad_gps.i"
+	@echo "... mad_gps.s"
+	@echo "... mad_system.o"
+	@echo "... mad_system.i"
+	@echo "... mad_system.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

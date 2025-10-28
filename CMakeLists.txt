@@ -20,18 +20,27 @@ set(CMAKE_CXX_STANDARD 17)
 # SDK初期化
 pico_sdk_init()
 
-add_executable(rqs_sss
-    rqs_sss.c
+add_subdirectory(hal)
+
+# 2. メインの実行ファイル (main.c と、ロジック部の .c)
+add_executable(${CMAKE_PROJECT_NAME}
+    main.c
+    mad_gps.c
+    mad_system.c
 )
 
-# 共通ライブラリをリンク
-target_link_libraries(rqs_sss pico_stdlib hardware_i2c)
+# 9. メインの実行ファイルに、移植したHALライブラリをリンクする
+target_link_libraries(${CMAKE_PROJECT_NAME}
+    pico_stdlib
+    hardware_gpio
+    hardware_timer
+    hardware_uart  # (mad_usart.c で使用)
+    hardware_rtc   # (mad_system.c / mad_rtc.c で使用)
+    hal_lib        # 5. hal/CMakeLists.txt で定義したライブラリ名
+)
 
-# WiFiチップ搭載のボード(Pico Wなど)のとき
-if (PICO_CYW43_SUPPORTED)
-    target_link_libraries(rqs_sss pico_cyw43_arch_none)
-endif()
+# USB経由の printf (stdio) を有効化
+pico_enable_stdio_usb(${CMAKE_PROJECT_NAME} 1)
+pico_enable_stdio_uart(${CMAKE_PROJECT_NAME} 0) # 0 = UART0 (PC_UART)
 
-#元々あったexample_auto_set_url(blink)の箇所は削除してある
-# map/bin/hex/uf2ファイルを生成
-pico_add_extra_outputs(rqs_sss)
+pico_add_extra_outputs(${CMAKE_PROJECT_NAME})

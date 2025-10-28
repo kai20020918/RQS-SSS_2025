@@ -1,4 +1,4 @@
-/home/pico2/RQS-SSS_2025/build/CMakeFiles/rqs_sss.dir
+/home/pico2/RQS-SSS_2025/build/CMakeFiles/RQS-SSS_2025.dir
 /home/pico2/RQS-SSS_2025/build/CMakeFiles/edit_cache.dir
 /home/pico2/RQS-SSS_2025/build/CMakeFiles/rebuild_cache.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/CMakeFiles/edit_cache.dir
@@ -211,3 +211,6 @@
 /home/pico2/RQS-SSS_2025/build/pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/rebuild_cache.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/pico2/RQS-SSS_2025/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
+/home/pico2/RQS-SSS_2025/build/hal/CMakeFiles/hal_lib.dir
+/home/pico2/RQS-SSS_2025/build/hal/CMakeFiles/edit_cache.dir
+/home/pico2/RQS-SSS_2025/build/hal/CMakeFiles/rebuild_cache.dir

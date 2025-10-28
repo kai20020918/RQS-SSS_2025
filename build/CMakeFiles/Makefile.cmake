@@ -17,6 +17,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/picotool/picotoolTargets-release.cmake"
   "_deps/picotool/picotoolTargets.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/pioasmBuild-mkdirs.cmake"
+  "/home/pico2/RQS-SSS_2025/hal/CMakeLists.txt"
   "/home/pico2/RQS-SSS_2025/pico_sdk_import.cmake"
   "/home/pico2/pico-sdk/CMakeLists.txt"
   "/home/pico2/pico-sdk/cmake/Platform/PICO.cmake"
@@ -298,15 +299,17 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2_common/pico_stdio/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "hal/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/rqs_sss.dir/DependInfo.cmake"
+  "CMakeFiles/RQS-SSS_2025.dir/DependInfo.cmake"
   "pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/DependInfo.cmake"
   "pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake"
   "pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/pioasmBuild.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/DependInfo.cmake"
+  "hal/CMakeFiles/hal_lib.dir/DependInfo.cmake"
   )

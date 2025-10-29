@@ -19,7 +19,7 @@ target_link_libraries(hal_lib
     hardware_gpio
     hardware_timer
     hardware_uart
-    hardware_rtc
+    # hardware_rtc
     hardware_i2c
     hardware_spi
     hardware_flash

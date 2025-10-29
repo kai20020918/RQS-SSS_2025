@@ -25,8 +25,7 @@ add_subdirectory(hal)
 # 2. メインの実行ファイル (main.c と、ロジック部の .c)
 add_executable(${CMAKE_PROJECT_NAME}
     main.c
-    mad_gps.c
-    mad_system.c
+    # mad_gps.c
 )
 
 # 9. メインの実行ファイルに、移植したHALライブラリをリンクする
@@ -35,7 +34,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     hardware_gpio
     hardware_timer
     hardware_uart  # (mad_usart.c で使用)
-    hardware_rtc   # (mad_system.c / mad_rtc.c で使用)
+    # hardware_rtc   # (mad_system.c / mad_rtc.c で使用)
     hal_lib        # 5. hal/CMakeLists.txt で定義したライブラリ名
 )
 

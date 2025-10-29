@@ -16,7 +16,7 @@
 #define CALENDAR_MODE 1
 
 
-uint32_t SYSTEMCLOCK;		//CPU�N���b�N�̎��g���AHz�P��
+extern uint32_t SYSTEMCLOCK;		//CPU�N���b�N�̎��g���AHz�P��
 //--------------------------------------------------------------------------------------------
 void	mad_SYSTEM_INIT(void);
 
@@ -46,12 +46,12 @@ uint32_t	mad_SYSTEM_TIME_SYSTIME2RTC_DATE(void);	//�V�X�e������
 uint32_t	mad_SYSTEM_TIME_SYSTIME2RTC_TIME(void);	//�V�X�e��������RTC�����b�ɕϊ�
 void		mad_SYSTEM_TIME_RTC2SYSTIME(void);
 
-int data1,data2;
+extern int data1,data2;
 
 void		mad_SYSTEM_TIME_ClockSet(void);		//tm�`���Ō��ݎ�����ݒ肷��
 void		mad_SYSTEM_TIME_AlarmSet(void);		//tm�`���ŃA���[��������ݒ肷��
 
-	time_t	mad_SYSTEM_TIME;
+	extern time_t	mad_SYSTEM_TIME;
 
 
 //--------------------------------------------------------------------------------------------

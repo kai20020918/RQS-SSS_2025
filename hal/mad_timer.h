@@ -22,10 +22,10 @@ void	mad_TIMER1_DISABLE(void);
 void	mad_TIMER1_WAIT_10ms(uint16_t);
 
 
-uint32_t	mad_TIMER1_CountValue;
-uint32_t	mad_TIMER1_PostScale;
-uint32_t	mad_TIMER1_PostScale_Default;
-bool		mad_TIMER1_OverFlow;
+extern uint32_t	mad_TIMER1_CountValue;
+extern uint32_t	mad_TIMER1_PostScale;
+extern uint32_t	mad_TIMER1_PostScale_Default;
+extern bool		mad_TIMER1_OverFlow;
 
 //bool	s;
 

@@ -2028,54 +2028,6 @@ home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
-mad_gps.o: mad_gps.c.o
-.PHONY : mad_gps.o
-
-# target to build an object file
-mad_gps.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_gps.c.o
-.PHONY : mad_gps.c.o
-
-mad_gps.i: mad_gps.c.i
-.PHONY : mad_gps.i
-
-# target to preprocess a source file
-mad_gps.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_gps.c.i
-.PHONY : mad_gps.c.i
-
-mad_gps.s: mad_gps.c.s
-.PHONY : mad_gps.s
-
-# target to generate assembly for a file
-mad_gps.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_gps.c.s
-.PHONY : mad_gps.c.s
-
-mad_system.o: mad_system.c.o
-.PHONY : mad_system.o
-
-# target to build an object file
-mad_system.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_system.c.o
-.PHONY : mad_system.c.o
-
-mad_system.i: mad_system.c.i
-.PHONY : mad_system.i
-
-# target to preprocess a source file
-mad_system.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_system.c.i
-.PHONY : mad_system.c.i
-
-mad_system.s: mad_system.c.s
-.PHONY : mad_system.s
-
-# target to generate assembly for a file
-mad_system.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/RQS-SSS_2025.dir/build.make CMakeFiles/RQS-SSS_2025.dir/mad_system.c.s
-.PHONY : mad_system.c.s
-
 main.o: main.c.o
 .PHONY : main.o
 
@@ -2342,12 +2294,6 @@ help:
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.o"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i"
 	@echo "... home/pico2/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s"
-	@echo "... mad_gps.o"
-	@echo "... mad_gps.i"
-	@echo "... mad_gps.s"
-	@echo "... mad_system.o"
-	@echo "... mad_system.i"
-	@echo "... mad_system.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -2,9 +2,10 @@
 //Copyright 2019 Mathematical Assist Design Laboratories, Inc.
 //All Rights Reserved.
 //--------------------------------------------------------------------------------------------
-#include "mad_system.h"
+#include "hal/mad_system.h"
 #include "pico/stdlib.h"
 #include "hal/mad_gpio.h"
+#include "time.h"
 // #include "mad_GPS.h"
 // #include "mad_FLASH.h"
 // #include "em_emu.h"

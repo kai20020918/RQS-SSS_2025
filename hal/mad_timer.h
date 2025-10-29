@@ -20,7 +20,7 @@ void	mad_TIMER1_ResetTimerCounter(void);	//ï¿½ï¿½ï¿½ï¿½ï¿½ÍAï¿½Iï¿½[ï¿½gï¿½ï¿½ï
 void	mad_TIMER1_ENABLE(void);
 void	mad_TIMER1_DISABLE(void);
 void	mad_TIMER1_WAIT_10ms(uint16_t);
-
+void    mad_WAIT_us(uint32_t us);
 
 extern uint32_t	mad_TIMER1_CountValue;
 extern uint32_t	mad_TIMER1_PostScale;

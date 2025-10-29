@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
 #include "mad_timer.h"
+#include "pico/time.h"
 
 // グローバル変数 (元の .h ファイルで extern 宣言されている)
 uint32_t	mad_TIMER1_CountValue;
@@ -13,6 +14,18 @@ bool		mad_TIMER1_OverFlow = false; // main ループが参照するフラグ
 static struct repeating_timer mad_timer_handle;
 // repeating_timer の基本周期 (mad_TIMER1_INIT で設定)
 static uint32_t g_base_period_us = 0;
+
+
+
+//　新機関数の作成　Wait用
+
+void mad_WAIT_us(uint32_t us){
+    busy_wait_us(us);
+}
+
+// 
+
+
 
 // 元の TIMER1_IRQHandler に相当するコールバック関数
 static bool mad_timer_callback(struct repeating_timer *t) {

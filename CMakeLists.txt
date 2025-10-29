@@ -39,7 +39,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 )
 
 # USB経由の printf (stdio) を有効化
-pico_enable_stdio_usb(${CMAKE_PROJECT_NAME} 1)
+# pico_enable_stdio_usb(${CMAKE_PROJECT_NAME} 1)
 pico_enable_stdio_uart(${CMAKE_PROJECT_NAME} 0) # 0 = UART0 (PC_UART)
 
 pico_add_extra_outputs(${CMAKE_PROJECT_NAME})

@@ -28,10 +28,7 @@ void MainLoop(void);
 int main(void)
 {
     // --- 手動 UART stdio 初期化 ---
-    uart_init(UART_ID, BAUD_RATE);
-    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
-    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
-    stdio_uart_init_full(UART_ID, BAUD_RATE, UART_TX_PIN, UART_RX_PIN);
+
     // --- ここまで ---
 
     // GPIO 初期化 (Lチカや ADXL355 が使う前に必要)
@@ -42,14 +39,16 @@ int main(void)
     // 念のため少し待つ
     sleep_ms(100);
 
-    printf("--- UART Initialized. Initializing ADXL355... ---\n");
-    fflush(stdout);
+	mad_SYSTEM_INIT();
+
+    // printf("--- UART Initialized. Initializing ADXL355... ---\n");
+    // fflush(stdout);
 
     // ★ ADXL355 初期化 ★
     mad_ADXL355_Init();
 
-    printf("--- ADXL355 Initialized! Entering MainLoop... ---\n");
-    fflush(stdout);
+    // printf("--- ADXL355 Initialized! Entering MainLoop... ---\n");
+    // fflush(stdout);
 
     // メインループへ
     MainLoop();
@@ -84,10 +83,12 @@ void MainLoop(void)
         if (success) {
             // 読み取ったデータを printf で出力 (例: CH1 と CH2 の X, Y, Z)
             // ADXL_AXEL_DATA は mad_adxl355.c で定義されたグローバル変数
-            printf("[%lu] CH1: X=%ld Y=%ld Z=%ld | CH2: X=%ld Y=%ld Z=%ld",
+            printf("[%lu] CH1: X=%ld Y=%ld Z=%ld | CH2: X=%ld Y=%ld Z=%ld | CH3: X=%ld Y=%ld Z=%ld | CH4: X=%ld Y=%ld Z=%ld",
                    loop_count,
                    ADXL_AXEL_DATA[CH1][AXIS_X], ADXL_AXEL_DATA[CH1][AXIS_Y], ADXL_AXEL_DATA[CH1][AXIS_Z],
-                   ADXL_AXEL_DATA[CH2][AXIS_X], ADXL_AXEL_DATA[CH2][AXIS_Y], ADXL_AXEL_DATA[CH2][AXIS_Z]);
+                   ADXL_AXEL_DATA[CH2][AXIS_X], ADXL_AXEL_DATA[CH2][AXIS_Y], ADXL_AXEL_DATA[CH2][AXIS_Z],
+				   ADXL_AXEL_DATA[CH3][AXIS_X], ADXL_AXEL_DATA[CH3][AXIS_Y], ADXL_AXEL_DATA[CH3][AXIS_Z],
+				   ADXL_AXEL_DATA[CH4][AXIS_X], ADXL_AXEL_DATA[CH4][AXIS_Y], ADXL_AXEL_DATA[CH4][AXIS_Z]);
                    // 必要であれば CH3, CH4 も追加
 
             // エラーフラグも確認 (mad_ADXL355_Write 内でセットされる)

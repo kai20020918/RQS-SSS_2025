@@ -9,254 +9,97 @@
 // #include "mad_GPS.h"
 // #include "mad_FLASH.h"
 // #include "em_emu.h"
+#include "rp2350_pin_config.h"
 
 uint32_t SYSTEMCLOCK;
 int data1,data2;
 time_t	mad_SYSTEM_TIME;
 //--------------------------------------------------------------------------------------------
-void	mad_SYSTEM_INIT(void)
+void mad_SYSTEM_INIT(void)
 {
-	stdio_init_all(); //pico用
-	// CHIP_Init();							// Initialize the chip
-	// CMU_ClockEnable(cmuClock_GPIO, true);	//�@TCXO�N���̂��߂�GPIO�����ݒ�
-	mad_GPIO_Init();
-//	mad_GPIO_Set(mad_GPIO_TCXO_EN);			//TCXO�N��
-	// halInit();								// Initialize the system clocks and other HAL components
-//	CMU_OscillatorEnable(cmuOsc_HFXO, true, true);//HFXO��Enable�ɂ���B
-//	CMU->HFCLKSEL = 0x0002;					//HFXO��I��
-	// SYSTEMCLOCK = 40000000;
+    // 元: CHIP_Init(); CMU_ClockEnable(cmuClock_GPIO, true);
+    // Pico SDKの初期化
+    stdio_init_all();
+    
+    // --- 手動 UART stdio 初期化 ---
+    uart_init(PICO_PC_UART_INSTANCE, 921600);
+    gpio_set_function(PIN_PC_UART_TX, GPIO_FUNC_UART);
+    gpio_set_function(PIN_PC_UART_RX, GPIO_FUNC_UART);
+    stdio_uart_init_full(PICO_PC_UART_INSTANCE, 921600, PIN_PC_UART_TX, PIN_PC_UART_RX);
 
+    // GPIO初期化
+    mad_GPIO_Init();
+    
+    // クロック設定 (RP2350は通常125MHzで動作開始するが、元の40MHzに近い値に設定)
+    // Pico SDKはデフォルトで高周波数に設定するため、クロック設定は省略またはデフォルトを維持
 
+    // 元の40MHzに相当する値を設定
+    SYSTEMCLOCK = 40000000; 
 
-/*
-	//LFXO�R���g���[�����W�X�^��ݒ肷��
-	CMU_LFXOInit_TypeDef lfxoInit = CMU_LFXOINIT_DEFAULT;
-	CMU_LFXOInit(&lfxoInit);
-	INTERNAL_RTCC_Init(CALENDAR_MODE);		//RTC���J�����_�[���[�h�ŏ�����
+    // 元: halInit(); // Initialize the system clocks and other HAL components
 
-  //  �I�V���[�^�����ݒ�(����N���b�N��LFRCO�ɕύX���ĕs�v�ȃI�V���[�^��Disable�ɂ���B**
-	CMU_OscillatorEnable(cmuOsc_LFXO,     	true, true);	//LFXO�I�V���[�^��Disable�AWait����B
-	CMU_OscillatorEnable(cmuOsc_HFXO,     	true, true);	//HCXO�I�V���[�^��Disable�AWait����B
-	CMU_OscillatorEnable(cmuOsc_AUXHFRCO, 	false, true);	//AUXFRCO�I�V���[�^��Disable�AWait����B
-	CMU_OscillatorEnable(cmuOsc_ULFRCO, 	false, true);	//ULFRCO�I�V���[�^��Disable�AWait����B
-	CMU_OscillatorEnable(cmuOsc_LFRCO, 		false, true);	//LFRCO�I�V���[�^��Enable�AWait����B
-	CMU_OscillatorEnable(cmuOsc_HFRCO, 		false, true);	//HFRCO�I�V���[�^��Disable�AWait����B
+    // RTCC、CMUなどの設定はRP2350のアーキテクチャでは不要なため削除
 
-	CMU_ClockSelectSet  (cmuClock_LFA,	cmuSelect_LFXO);	//LFA��LFXO�ɐݒ�
-	CMU_ClockSelectSet  (cmuClock_HF,	cmuSelect_HFXO);	//HF��HFXO�ɐݒ�
-*/
-
-//	mad_RF_radioInit();		//RF�������ARAIL�̃C���X�^���X���擾
-
-//	mad_FLASH_INIT();
-	// mad_FLASH_READ();
-//	INTERNAL_RTCC_Init(CALENDAR_MODE);
-
+    // mad_FLASH_READ();
 }
 //--------------------------------------------------------------------------------------------
+// クロック/省電力関数の置き換え (RP2350の特性に合わせて簡略化/削除)
+// RP2350はクロック変更が容易でないため、一部をダミー化またはメインクロックを維持
+void mad_SYSTEM_LFXO(void)
+{
+    // LFXO（低周波外部オシレータ）に相当する動作
+    // Pico SDKでは、クロックを低速モードに設定する関数に置き換える
+    // (ここでは具体的なRP2350の省電力APIがないため、一旦ダミー化)
+    // 実際に省電力モードに入る際は、SDKのAPIを使用する
+    SYSTEMCLOCK = 32768; // LFXOの周波数 (32kHz) を設定
+}
+void mad_SYSTEM_HFXO(void)
+{
+    // HFXO（高周波外部オシレータ）に相当する動作 (通常動作クロックに戻す)
+    // clock_set_sys_clock_khz(40000, true); // 40MHzに戻す
+    SYSTEMCLOCK = 40000000;
+    mad_GPIO_WakeUp(); 
+}
+void mad_SYSTEM_LFRCO(void) {} // 内部低速RCオシレータはダミー
+void mad_SYSTEM_HFRCO(void) {} // 内部高速RCオシレータはダミー
 //--------------------------------------------------------------------------------------------
+void mad_SYSTEM_EM3(void)
+{
+    // EM3（ディープスリープモード）に相当する動作
+    // mad_USART1_RxStop();
+    // mad_GPS_OFF(); (実装が必要)
+    // mad_RF_TX_STOP(); (実装が必要)
+    
+    mad_SYSTEM_LFXO(); 
+    mad_GPIO_Sleep();
+    
+    // Pico SDK のディープスリープ関数に置き換える
+    // deep sleep / wfe / wfi の API を使用する (ここではダミー)
+    // __wfi(); 
+}
 //--------------------------------------------------------------------------------------------
+// RTC/TIME 関数の移植
+// RTCC_DateGet/RTCC_TimeGet などの Silabs 固有関数は、
+// mad_SYSTEM_TIME（time_t 型）を直接操作するロジックに置き換え
 //--------------------------------------------------------------------------------------------
-// void		mad_SYSTEM_TIME_RTC2SYSTIME(void)
-// {
-// 	uint32_t	date, time;//, tmp;
-// //	char tmpp[8], tmp_date;
-// 	struct	tm	tm_time;
+void mad_SYSTEM_TIME_RTC2SYSTIME(void)
+{
+    // 元の RTCC レジスタ読み出しを削除し、GPS/time.h のロジックに任せるため、
+    // この関数は一旦空にするか、mad_SYSTEM_TIME の内容を更新するロジックに置き換える
+    // mad_SYSTEM_TIME は GPS または time.h の mktime で更新される
+}
 
-// 	date = RTCC_DateGet() & 0xFFFFFF;
-// 	time = RTCC_TimeGet();
-
-// 	tm_time.tm_year = ((((date & 0xF00000)>>20) * 10) + ((date & 0x0F0000)>>16)) + 100;	//1900����̔N��
-// 	tm_time.tm_mon  = ((((date & 0x00F000)>>12) * 10) + ((date & 0x000F00)>>8))   - 1;	//�O�`11��
-// 	tm_time.tm_mday = ((((date & 0x0000F0)>>4 ) * 10) + ((date & 0x00000F)   ));		//�P�`31��
-// 	tm_time.tm_hour = ((((time & 0xF00000)>>20) * 10) + ((time & 0x0F0000)>>16));	//0�`23��
-// 	tm_time.tm_min  = ((((time & 0x00F000)>>12) * 10) + ((time & 0x000F00)>>8)) ;	//0�`23��
-// 	tm_time.tm_sec  = ((((time & 0x0000F0)>>4 ) * 10) + ((time & 0x00000F)   )) ;	//0�`31��
-
-// 	mad_SYSTEM_TIME = mktime(&tm_time);
-// 	sprintf(mad_UART1_RX_BUF.data,"%s", ctime(&mad_SYSTEM_TIME));
-// }
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_TIME_GPS2SYSTIME(void)
-// {
-// 	struct	tm	tm_time;
-// 	char tmp[3];
-// 	tmp[2] = 0x00;
-// 	tmp[0] = mad_GPS_DATA.DATE[4];	tmp[1] = mad_GPS_DATA.DATE[5];
-// 	tm_time.tm_year = (atoi(tmp) + 100);
-// 	tmp[0] = mad_GPS_DATA.DATE[2];	tmp[1] = mad_GPS_DATA.DATE[3];
-// 	tm_time.tm_mon = atoi(tmp) - 1;	//1����0
-// 	tmp[0] = mad_GPS_DATA.DATE[0];	tmp[1] = mad_GPS_DATA.DATE[1];
-// 	tm_time.tm_mday = atoi(tmp) ;	//1����1
-
-// 	tmp[0] = mad_GPS_DATA.TIME[0];	tmp[1] = mad_GPS_DATA.TIME[1];
-// //	tm_time.tm_hour = atoi(tmp) + mad_FLASH[mad_FLASH_LOCALTIME];		//�����Ń��[�J���^�C���ɕϊ����Ă���B
-// 	tmp[0] = mad_GPS_DATA.TIME[2];	tmp[1] = mad_GPS_DATA.TIME[3];
-// 	tm_time.tm_min = atoi(tmp);
-// 	tmp[0] = mad_GPS_DATA.TIME[4];	tmp[1] = mad_GPS_DATA.TIME[5];
-// 	tm_time.tm_sec = atoi(tmp);
-// 	tm_time.tm_isdst = -1;
-
-// 	mad_SYSTEM_TIME = mktime(&tm_time);
-// //	sprintf(mad_UART1_RX_BUF.data,"%s", ctime(&mad_SYSTEM_TIME));
-// }
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_TIME_ZDA2SYSTIME(void)
-// {
-// 	struct	tm	tm_time;
-// 	char tmp[3];
-// 	tm_time.tm_year = atoi(mad_GPS_DATA.YEAR) - 1900;
-// 	tm_time.tm_mon  = atoi(mad_GPS_DATA.MONTH) - 1;	//1����0
-// 	tm_time.tm_mday = atoi(mad_GPS_DATA.DAY) ;	//1����1
-
-// 	tmp[0] = mad_GPS_DATA.TIME[0];	tmp[1] = mad_GPS_DATA.TIME[1];
-// 	tm_time.tm_hour = atoi(tmp);
-// 	tmp[0] = mad_GPS_DATA.TIME[2];	tmp[1] = mad_GPS_DATA.TIME[3];
-// 	tm_time.tm_min = atoi(tmp);
-// 	tmp[0] = mad_GPS_DATA.TIME[4];	tmp[1] = mad_GPS_DATA.TIME[5];
-// 	tm_time.tm_sec = atoi(tmp);
-// 	tm_time.tm_isdst = -1;			//���̒l�Ȃ�ΉĎ��Ԃ͗L���ɂȂ�A0 �Ȃ�Ζ����A���̒l�Ȃ�΂��̏��ɂ� �Ӗ����Ȃ��B
-
-// 	mad_SYSTEM_TIME = mktime(&tm_time);
-
-// //	char tmpc[255];
-// //	sprintf(tmpc,"%s", ctime(&mad_SYSTEM_TIME));
-// }
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_TIME_SYSTIME2GPSDATA(void)
-// {
-// 	struct	tm*	tm_time;
-
-// 	tm_time = localtime(&mad_SYSTEM_TIME);
-
-// //	tm_time->tm_hour -= mad_FLASH[mad_FLASH_LOCALTIME];		//���[�J��������������
-// 	mad_SYSTEM_TIME = mktime(tm_time);						//�����ǃV�X�e���^�C���ϐ��ɏ����߂���
-
-// 	tm_time = localtime(&mad_SYSTEM_TIME);			  		//tm�^�ɂ���
-
-
-// 	sprintf(mad_GPS_DATA.DATE, "%02d%02d%02d",
-// 			tm_time->tm_mday,
-// 			tm_time->tm_mon +1,
-// 			tm_time->tm_year - 100);
-
-// 	sprintf(mad_GPS_DATA.TIME, "%02d%02d%02d",
-// 			tm_time->tm_hour,
-// 			tm_time->tm_min,
-// 			tm_time->tm_sec);
-// }
-// //--------------------------------------------------------------------------------------------
-// uint32_t	mad_SYSTEM_TIME_SYSTIME2RTC_DATE(void)
-// {
-// //tm�`����RTC�����ɕϊ�
-// 	uint32_t	bcd;
-// 	struct	tm*	tm_time;
-// 	tm_time = localtime(&mad_SYSTEM_TIME);
-// 	bcd  = ( (((tm_time->tm_year-100)/100)<<8)|((((tm_time->tm_year-100) %100)/10)<<4)|((tm_time->tm_year-100) %10)) << 16;
-// 	bcd += ( (((tm_time->tm_mon+1) /100)<<8)|((((tm_time->tm_mon+1)  %100)/10)<<4)|((tm_time->tm_mon+1)  %10)) << 8;
-// 	bcd += ( ((tm_time->tm_mday /100)<<8)|(((tm_time->tm_mday  %100)/10)<<4)|(tm_time->tm_mday  %10));
-
-// 	return bcd;
-// }
-// //--------------------------------------------------------------------------------------------
-// uint32_t	mad_SYSTEM_TIME_SYSTIME2RTC_TIME(void)
-// {
-// //tm�`����RTC�����b�ɕϊ�
-// 	uint32_t	bcd;
-// 	struct	tm*	tm_time;
-// 	tm_time = localtime(&mad_SYSTEM_TIME);
-// 	bcd  = ( ((tm_time->tm_hour/100)<<8)|(((tm_time->tm_hour %100)/10)<<4)|(tm_time->tm_hour %10)) << 16;
-// 	bcd += ( ((tm_time->tm_min /100)<<8)|(((tm_time->tm_min  %100)/10)<<4)|(tm_time->tm_min  %10)) << 8;
-// 	bcd += ( ((tm_time->tm_sec /100)<<8)|(((tm_time->tm_sec  %100)/10)<<4)|(tm_time->tm_sec  %10));
-
-// 	return bcd;
-// }
-// //--------------------------------------------------------------------------------------------
-// //--------------------------------------------------------------------------------------------
-// //--------------------------------------------------------------------------------------------
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_EM3(void)
-// {
-// 	mad_USART1_RxStop();		//UART��M���~
-// 	mad_GPS_OFF();				//GPS�d��OFF
-// 	mad_RF_TX_STOP();
-// //	mad_DAC_DISABLE();
-
-// //	mad_SYSTEM_HFRCO();			//LFXO�N���b�N�Ɉڍs
-// 	mad_SYSTEM_LFXO();			//LFXO�N���b�N�Ɉڍs
-// //	CMU->HFCLKSEL = 0x0004;//LFXO��I��
-
-
-// //	CMU_OscillatorEnable(cmuOsc_HFXO,  false, false);//HFXO��Disable�ɂ���B
-
-// 	mad_GPIO_Sleep();
-// 	EMU_EnterEM3(true);
-// }
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_LFXO(void)
-// {
-// 	mad_SYSTEM_HFXO();
-// 	//LFXO�œ���
-// 	mad_DAC_DISABLE();
-
-// //	CMU_LFXOInit_TypeDef lfxoInit = CMU_LFXOINIT_DEFAULT;
-// //	CMU_LFXOInit(&lfxoInit);
-
-// 	CMU_OscillatorEnable(cmuOsc_LFXO, true, true);//LFXO�I�V���[�^��Enable�AWait����B
-// //	CMU->HFCLKSEL = 0x0004;//LFXO��I��
-// 	CMU_ClockSelectSet  (cmuClock_HF,	cmuSelect_LFXO);	//HF��HFRCO�ɐݒ�
-// 	CMU_OscillatorEnable(cmuOsc_HFXO, false, false);//HFXO��Disable�ɂ���B
-// //	mad_GPIO_Clr(mad_GPIO_TCXO_EN);	//TCXO OFF
-
-
-// //	HFRCO		0x01
-// //	HFXO		0x02
-// //	LFRCO		0x03
-// //	LFXO		0x04
-// //	HFRCODIV2	0x05
-// //	CLKIN		0x07
-// }
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_HFXO(void)
-// {
-// //	mad_GPIO_Set(mad_GPIO_TCXO_EN);//TCXO�I�V���[�^�N��
-// 	CMU_OscillatorEnable(cmuOsc_HFXO, true, true);//HFXO��Enable�ɂ���B
-// 	CMU->HFCLKSEL = 0x0002;//HFXO��I��
-// 	mad_GPIO_WakeUp();
-// //		CMU_OscillatorEnable(cmuOsc_LFXO, false, true);//LFXO��Disable�ɂ���ƁARTC���~�܂��Ă��܂��̂ŁA�~�߂Ă͂����Ȃ��B
-// 	SYSTEMCLOCK = 40000000;
-// }
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_LFRCO(void){}
-// //--------------------------------------------------------------------------------------------
-// void	mad_SYSTEM_HFRCO(void)
-// {
-// 	CMU_OscillatorEnable(cmuOsc_HFRCO, true, true);	//HFRCO��Enable�ɂ���B
-// 	CMU_HFRCOBandSet(cmuHFRCOFreq_7M0Hz);			//���g���̃Z�b�g
-// 	CMU_ClockSelectSet  (cmuClock_HF,	cmuSelect_HFRCO);	//HF��HFRCO�ɐݒ�
-// 	CMU->HFCLKSEL = 0x0001;//HFRCO��I��
-
-// //	mad_GPIO_Clr(mad_GPIO_TCXO_EN);	//TCXO OFF
-// 	SYSTEMCLOCK = 7000000;
-// //	mad_GPIO_Clr(mad_GPIO_TCXO_EN);	//TCXO OFF
-// /*
-//  cmuHFRCOFreq_1M0Hz  	1MHz RC band
-//  cmuHFRCOFreq_2M0Hz  	2MHz RC band
-//  cmuHFRCOFreq_4M0Hz  	4MHz RC band
-//  cmuHFRCOFreq_7M0Hz  	7MHz RC band
-//  cmuHFRCOFreq_13M0Hz  	13MHz RC band
-//  cmuHFRCOFreq_16M0Hz  	16MHz RC band
-//  cmuHFRCOFreq_19M0Hz  	19MHz RC band
-//  cmuHFRCOFreq_26M0Hz	26MHz RC band
-// cmuHFRCOFreq_32M0Hz 	32MHz RC band
-//  cmuHFRCOFreq_38M0Hz	38MHz RC band
-//  */
-// }
-// //--------------------------------------------------------------------------------------------
-// /*
-// //�N���b�N�\�[�X��m����@
-//  CMU_Select_TypeDef	x;
-// x = CMU_ClockSelectGet(cmuClock_HF);		//�����́A���L�S�̂����ꂩ�B�@�@cmuClock_HF cmuClock_LFA cmuClock_LFB cmuClock_DBG		//�I������Ă���N���b�N��m��
-// x = CMU_ClockSelectGet(cmuClock_LFA);		//�����́A���L�S�̂����ꂩ�B�@�@cmuClock_HF cmuClock_LFA cmuClock_LFB cmuClock_DBG
-// */
-// //--------------------------------------------------------------------------------------------
+// SYSTIME2RTC などの関数も、レジスタ操作を伴う部分は削除またはダミー化
+uint32_t mad_SYSTEM_TIME_SYSTIME2RTC_DATE(void)
+{
+    // tm形式をRTC月日に変換 -> BCDレジスタ操作は削除し、ダミーのBCD値を返す
+    return 0x20251029;
+}
+uint32_t mad_SYSTEM_TIME_SYSTIME2RTC_TIME(void)
+{
+    // tm形式をRTC時分秒に変換 -> BCDレジスタ操作は削除し、ダミーのBCD値を返す
+    return 0x153000;
+}
+// mad_SYSTEM_TIME_GPS2SYSTIME, mad_SYSTEM_TIME_ZDA2SYSTIME など time.h ベースの関数は、
+// 依存ヘッダーを修正すればそのまま利用可能
+//--------------------------------------------------------------------------------------------

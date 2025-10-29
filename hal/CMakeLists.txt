@@ -6,6 +6,7 @@ add_library(hal_lib
     mad_timer.c
     mad_system.c
     mad_adxl355.c
+    mad_usart.c
 )
 
 # このディレクトリ (hal/) もインクルードパスに追加

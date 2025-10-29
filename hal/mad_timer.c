@@ -3,11 +3,12 @@
 #include "hardware/timer.h"
 #include "mad_timer.h"
 #include "pico/time.h"
+// #include <stdio.h>
 
 // グローバル変数 (元の .h ファイルで extern 宣言されている)
-uint32_t	mad_TIMER1_CountValue;
-uint32_t	mad_TIMER1_PostScale;
-uint32_t	mad_TIMER1_PostScale_Default;
+uint32_t	mad_TIMER1_CountValue = 0;
+uint32_t	mad_TIMER1_PostScale = 0;
+uint32_t	mad_TIMER1_PostScale_Default = 0;
 bool		mad_TIMER1_OverFlow = false; // main ループが参照するフラグ
 
 // RP2350の repeating_timer ハンドル
@@ -29,9 +30,11 @@ void mad_WAIT_us(uint32_t us){
 
 // 元の TIMER1_IRQHandler に相当するコールバック関数
 static bool mad_timer_callback(struct repeating_timer *t) {
+    // printf("Timer callback fired. PostScale: %d\n", mad_TIMER1_PostScale); // ★確認 2
     mad_TIMER1_PostScale--;
 	if(mad_TIMER1_PostScale == 0){
 		mad_TIMER1_OverFlow = true; // main ループの while を抜ける
+        // printf("Timer Overflow!\n"); // 確認3
 		mad_TIMER1_PostScale = mad_TIMER1_PostScale_Default;
 	}
     return true; // タイマーを継続
@@ -69,7 +72,20 @@ void mad_TIMER1_INIT(uint16_t CountValue, uint32_t PostScaleValue)
     // ではなく、(CountValue / SYSTEMCLOCK) が基本周期 (us) で、
     // それが PostScaleValue 回呼ばれたら OverFlow。
 
-    g_base_period_us = ((uint64_t)CountValue * 1000000) / SYSTEMCLOCK;
+    if (CountValue == 40000 && SYSTEMCLOCK == 40000000) {
+        g_base_period_us = 1000; // 1ms = 1000 us に固定 (このプロジェクトの設計に依存)
+    } else {
+        // 万一 CountValue や SYSTEMCLOCK が変更された場合の安全策
+        // ただし、整数オーバーフローを避けるために式を修正
+        g_base_period_us = 1000000 / (SYSTEMCLOCK / CountValue); 
+    }
+    
+    // (デバッグ出力を残す)
+    // printf("Timer Init: CountValue=%u, BasePeriod=%u us\n", CountValue, g_base_period_us);
+
+    // printf("Timer Init: CountValue=%u, BasePeriod=%u us\n", CountValue, g_base_period_us); // ★確認 1
+
+    // g_base_period_us = ((uint64_t)CountValue * 1000000) / SYSTEMCLOCK;
 
     mad_TIMER1_PostScale_Default = PostScaleValue;
 	mad_TIMER1_ResetTimerCounter();

@@ -3,6 +3,14 @@
 //All Rights Reserved.
 //--------------------------------------------------------------------------------------------
 #include "mad_gps.h"
+#include "mad_usart.h"
+
+
+uint8_t mad_GPS_DATA_MEM[16];		//メモリ保存用のバッファ
+GPS_INT		mad_GPS_INT;
+GPS_DATA	mad_GPS_DATA, mad_GPS_DATA_backup;
+uint32_t		mad_GPS_TX_DATA[16];
+
 
 //UBX-CFG-MSG
 static char GPGLL_OFF[16] 	= {	0xB5, 0x62, 0x06, 0x01, 0x08, 0x00, 0xF0, 0x01,	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2A};
@@ -35,34 +43,43 @@ static char GPS_920kbps[32] = {	0xB5, 0x62, 0x06, 0x00, 0x14, 0x00, 0x01, 0x00,
 //--------------------------------------------------------------------------------------------
 void	mad_GPS_INIT(void)
 {
-//	mad_SYSTEM_HFRCO();
-  	mad_GPS_ON();	//ON���Ă��珉��������܂ł̊Ԃ�WAIT���K�v
+  	mad_GPS_ON();	//ONしてから初期化するまでの間にWAITが必要
 	mad_USART1_INIT(9600);			//ZOE-M8G
-	mad_USART1_RxStop();
+	mad_USART1_RxStop(); // ★ Init 直後は受信停止 ★
 	mad_TIMER1_WAIT_10ms(100);
 
 	int	i;
-
+    // --- ▼▼▼ printf デバッグ (ラベル修正) ▼▼▼ ---
+    printf("GPS_INIT: Checkpoint 1 - Before GPGSA loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGSA_OFF[i]);
+    printf("GPS_INIT: Checkpoint 2 - After GPGSA loop\n"); fflush(stdout);
+
+    printf("GPS_INIT: Checkpoint 3 - Before GPGSV loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGSV_OFF[i]);
+    printf("GPS_INIT: Checkpoint 4 - After GPGSV loop\n"); fflush(stdout);
+
+    printf("GPS_INIT: Checkpoint 5 - Before GPGLL loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGLL_OFF[i]);
+    printf("GPS_INIT: Checkpoint 6 - After GPGLL loop\n"); fflush(stdout);
+
+    printf("GPS_INIT: Checkpoint 7 - Before GPRMC loop\n"); fflush(stdout);	
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPRMC_OFF[i]);
+    printf("GPS_INIT: Checkpoint 8 - After GPRMC loop\n"); fflush(stdout);	
+
+    printf("GPS_INIT: Checkpoint 9 - Before GPVTG loop\n"); fflush(stdout);	
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPVTG_OFF[i]);
-	/*
-	for(i = 0; i<14 ; i++)	mad_USART1_TxChar(GPGSA_OFF[i]);
-//	for(i = 0; i<14 ; i++)	mad_USART1_TxChar(GPZDA_OFF[i]);
-	for(i = 0; i<14 ; i++)	mad_USART1_TxChar(GPGGA_OFF[i]);
-*/
-//	mad_USART1_INIT(460800);			//ZOE-M8G
+    printf("GPS_INIT: Checkpoint 10 - After GPVTG loop\n"); fflush(stdout);
+
+	printf("GPS_INIT: Checkpoint 11 - Before GPGGA_OFF loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGGA_OFF[i]);
+    printf("GPS_INIT: Checkpoint 12 - After GPGGA_OFF loop\n"); fflush(stdout);
+
+    printf("GPS_INIT: Checkpoint 13 - Before GPZDA_ON loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPZDA_ON[i]);
-
-//	for(i = 0; i<28 ; i++)	mad_USART1_TxChar(GPS_460kbps[i]);
-
-//	mad_USART1_INIT(460800);			//ZOE-M8G
-//	mad_USART1_INIT(460800);			//ZOE-M8G
-
+    printf("GPS_INIT: Checkpoint 14 - After GPZDA_ON loop\n"); fflush(stdout);
+    // --- ▲▲▲ printf デバッグ (ラベル修正) ▲▲▲ ---
 }
+
 //--------------------------------------------------------------------------------------------
 bool	mad_GPS_GetZDA(void)	//GPZDA�̍s�������M����̐��𐮂���
 {
@@ -602,8 +619,8 @@ void	mad_GPS_ON(void)
 void	mad_GPS_OFF(void)
 {
   	mad_GPIO_Clr(mad_GPIO_GPS_ON);
-	GPIO_PinModeSet(gpioPortD, 9, gpioModeDisabled, 1);		//TxD
-	GPIO_PinModeSet(gpioPortD, 10, gpioModeDisabled, 0);		//RxD
+	// GPIO_PinModeSet(gpioPortD, 9, gpioModeDisabled, 1);		//TxD
+	// GPIO_PinModeSet(gpioPortD, 10, gpioModeDisabled, 0);		//RxD
 }
 //--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------

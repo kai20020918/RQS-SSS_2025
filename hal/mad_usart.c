@@ -12,6 +12,7 @@
 #include "hardware/uart.h"
 #include "hardware/irq.h"
 #include "hardware/gpio.h"
+#include "pico/sync.h"
 
 #include "mad_usart.h" 
 #include "mad_gpio.h"  
@@ -23,12 +24,11 @@ static void mad_uart1_rx_irq_handler(void);
 
 // 補助関数: 受信バッファの状態を取得
 // 注: mad_usart.h で mad_UARTx_RX_BUF の実体 (mad_usart.c内) と extern 宣言 (mad_usart.h内)が必要です。
-extern mad_UART_RX_BUF mad_UART0_RX_BUF;
-extern mad_UART_RX_BUF mad_UART1_RX_BUF;
+extern mad_UART0_RX_BUF_t mad_UART0_RX_BUF;
+extern mad_UART1_RX_BUF_t mad_UART1_RX_BUF;
 
-#define UART0_BUFFER_SIZE 16 
 
-mad_UART_RX_BUF mad_UART0_RX_BUF = {
+mad_UART0_RX_BUF_t mad_UART0_RX_BUF = {
     .data = {0},
     .index = 0,
     .empty = true,
@@ -37,7 +37,7 @@ mad_UART_RX_BUF mad_UART0_RX_BUF = {
 };
 
 // mad_UART1_RX_BUF のサイズは mad_usart.h の定義（512）を使用
-mad_UART_RX_BUF mad_UART1_RX_BUF = {
+mad_UART1_RX_BUF_t mad_UART1_RX_BUF = {
     .data = {0},
     .index = 0,
     .empty = true,
@@ -45,8 +45,11 @@ mad_UART_RX_BUF mad_UART1_RX_BUF = {
     .enter = 0
 };
 //--------------------------------------------------------------------------------------------
-void mad_USART0_RxBufClr(void)
-{
+
+
+
+void mad_USART0_RxBufClr(void){
+    uint32_t saved_irq = save_and_disable_interrupts(); //割り込みを一時無効化
     mad_UART0_RX_BUF.index = 0;
     mad_UART0_RX_BUF.empty = true;
     mad_UART0_RX_BUF.overflow = false;
@@ -55,8 +58,8 @@ void mad_USART0_RxBufClr(void)
     memset(mad_UART0_RX_BUF.data, 0x00, sizeof(mad_UART0_RX_BUF.data)); 
 }
 //--------------------------------------------------------------------------------------------
-void mad_USART1_RxBufClr(void)
-{
+void mad_USART1_RxBufClr(void){   
+    uint32_t saved_irq = save_and_disable_interrupts();
     mad_UART1_RX_BUF.index = 0;
     mad_UART1_RX_BUF.empty = true;
     mad_UART1_RX_BUF.overflow = false;
@@ -64,25 +67,41 @@ void mad_USART1_RxBufClr(void)
     memset(mad_UART1_RX_BUF.data, 0x00, sizeof(mad_UART1_RX_BUF.data));
 }
 //--------------------------------------------------------------------------------------------
-void mad_USART1_INIT(uint64_t baudrate)
-{
-    // 1. UARTペリフェラルの初期化 (Pico SDK)
-    uart_init(PICO_GPS_UART_INSTANCE, baudrate);
-    uart_set_baudrate(PICO_GPS_UART_INSTANCE, baudrate);
+void mad_USART1_INIT(uint64_t baudrate){
+    printf("mad_USART1_INIT: Starting (for GPS - uart1) with requested baudrate %lu...\n", (uint32_t)baudrate);
+    fflush(stdout);
 
-    // 2. ピン機能の設定 (mad_gpio.h でピン番号が設定済みと仮定)
-    gpio_set_function(mad_GPIO_TX1.pin, GPIO_FUNC_UART);
-    gpio_set_function(mad_GPIO_RX1.pin, GPIO_FUNC_UART);
+    // ★★★ 修正: PICO_GPS_UART_INSTANCE (uart1) を使う ★★★
+    uint actual_baudrate = uart_init(PICO_GPS_UART_INSTANCE, (uint32_t)baudrate);
+    printf("mad_USART1_INIT: uart_init done. Actual baudrate: %u\n", actual_baudrate);
+    fflush(stdout);
 
-    // 3. 割り込みハンドラの登録と有効化
-    irq_set_exclusive_handler(UART1_IRQ, mad_uart1_rx_irq_handler);
-    irq_set_enabled(UART1_IRQ, true);
+    if (actual_baudrate == 0) {
+        printf("mad_USART1_INIT: Failed to set baudrate!\n"); fflush(stdout);
+        return; // 初期化失敗
+    }
 
-    // 4. 受信バッファのクリア
+    // --- ピン機能設定 (GPSピン) ---
+    gpio_set_function(PIN_GPS_UART_TX, GPIO_FUNC_UART);
+    printf("mad_USART1_INIT: gpio_set_function TX done.\n"); fflush(stdout);
+    gpio_set_function(PIN_GPS_UART_RX, GPIO_FUNC_UART);
+    printf("mad_USART1_INIT: gpio_set_function RX done.\n"); fflush(stdout);
+
+    // --- ★★★ 修正: stdio_uart_init_full は UART0 用なのでここでは呼ばない ★★★ ---
+    
+    // --- IRQ 関連 (UART1) ---
+    int uart_irq = (PICO_GPS_UART_INSTANCE == uart0) ? UART0_IRQ : UART1_IRQ; // UART1_IRQ
+    irq_set_exclusive_handler(uart_irq, mad_uart1_rx_irq_handler);
+    printf("mad_USART1_INIT: irq_set_exclusive_handler done.\n"); fflush(stdout);
+    irq_set_enabled(uart_irq, true);
+    printf("mad_USART1_INIT: irq_set_enabled done.\n"); fflush(stdout);
+    
+    uart_set_irq_enables(PICO_GPS_UART_INSTANCE, false, false); // 受信は RxStart で開始
+    printf("mad_USART1_INIT: uart_set_irq_enables done.\n"); fflush(stdout);
+
     mad_USART1_RxBufClr();
-    // 受信割り込みの有効化は mad_USART1_RxStart で行う
-}
-//--------------------------------------------------------------------------------------------
+    printf("mad_USART1_INIT: RxBufClr done. Finished.\n"); fflush(stdout);
+}//--------------------------------------------------------------------------------------------
 void mad_USART0_RxStart(void)
 {
     // 受信割り込みを有効化 (Tx割り込みは使用しない)
@@ -110,25 +129,61 @@ void mad_USART1_RxStop(void)
 //--------------------------------------------------------------------------------------------
 void mad_USART0_INIT(uint64_t baudrate)
 {
-    // 1. UARTペリフェラルの初期化 (Pico SDK)
-    uart_init(PICO_PC_UART_INSTANCE, baudrate);
-    uart_set_baudrate(PICO_PC_UART_INSTANCE, baudrate);
-
-    // 2. ピン機能の設定
-    gpio_set_function(mad_GPIO_TX0.pin, GPIO_FUNC_UART);
-    gpio_set_function(mad_GPIO_RX0.pin, GPIO_FUNC_UART);
-
-    // 3. 割り込みハンドラの登録と有効化
+    printf("mad_USART0_INIT: Setting up RX Interrupt for UART0 (stdio)...\n");
+    fflush(stdout);
+    
+    // 1. UARTペリフェラルとピンの初期化は mad_SYSTEM_INIT が stdio 用に実行済み
+    //    ここでは何もしない (重複呼び出しを避ける)
+    
+    // 2. 割り込みハンドラの登録と有効化
     irq_set_exclusive_handler(UART0_IRQ, mad_uart0_rx_irq_handler);
     irq_set_enabled(UART0_IRQ, true);
+    printf("mad_USART0_INIT: IRQ handler set.\n");
+    fflush(stdout);
 
-    // 4. 受信バッファのクリアと受信開始
+    // 3. 受信バッファのクリアと受信開始
     mad_USART0_RxBufClr();
-    mad_USART0_RxStart();
+    mad_USART0_RxStart(); // PC からのコマンド受信をすぐに開始
+    printf("mad_USART0_INIT: RX Buffer cleared and RX started.\n");
+    fflush(stdout);
 }
 //--------------------------------------------------------------------------------------------
 // (mad_USART0_RxCkSumCheck, mad_USART0_RxCkSumCheck4char, mad_USART0_TxErrorはそのまま)
 // (ここでは省略しますが、元のコードをそのまま貼り付けて問題ありません)
+bool	mad_USART0_RxCkSumCheck(char *rxdata){
+	  char *tp;
+	  strcpy(rxdata,mad_UART0_RX_BUF.data);
+
+	  tp = strtok(rxdata, "*");
+	  tp = strtok(NULL, "*");
+
+	  uint8_t cksum = strtol(tp, (char **) NULL, 16);
+
+	  strcpy(rxdata,mad_UART0_RX_BUF.data);
+	  int count = strlen(rxdata);
+	  uint8_t tmp = 0;
+
+	  for(int i = 0; i< count ; i++){
+		  tmp += rxdata[i];
+	  }
+	  if(tmp == cksum)return true;
+	  else	return false;
+}
+
+bool	mad_USART0_RxCkSumCheck4char(void){
+	if(mad_UART0_RX_BUF.data[0] != 'C')		return false;
+	uint8_t	cksum;
+	cksum =  mad_UART0_RX_BUF.data[0];
+	cksum += mad_UART0_RX_BUF.data[1];
+	cksum += mad_UART0_RX_BUF.data[2];
+	if(cksum == mad_UART0_RX_BUF.data[3])		return true;
+	return false;
+}
+
+void	mad_USART0_TxError(void){
+//	mad_USART0_TxStr("\nERROR>");
+//	mad_USART0_RxBufClr();
+}
 //--------------------------------------------------------------------------------------------
 void mad_USART0_TxPrompt(void)
 {
@@ -151,16 +206,38 @@ void mad_USART1_TxStr(char *data)
 //--------------------------------------------------------------------------------------------
 void mad_USART0_TxChar(char data)
 {
+    //　PCへの送信
     uart_putc_raw(PICO_PC_UART_INSTANCE, data);
 }
 //--------------------------------------------------------------------------------------------
 void mad_USART1_TxChar(char data)
 {
+    // GPSへの送信
     uart_putc_raw(PICO_GPS_UART_INSTANCE, data);
 }
 //--------------------------------------------------------------------------------------------
-// (mad_USART0_TxStrCksum はそのまま)
-//--------------------------------------------------------------------------------------------
+void	mad_USART0_TxStrCksum(char *data)
+{
+	  size_t	count;
+	  uint8_t	cksum = 0;
+	  char cksumHex[4];
+
+	  count = strlen(data);
+	  for(uint8_t i = 0; i < count; i++){
+		  cksum += data[i];
+          // ★ 修正: USART_Tx -> uart_putc_raw ★
+		  uart_putc_raw(PICO_PC_UART_INSTANCE, data[i]);
+	  };
+	  uart_putc_raw(PICO_PC_UART_INSTANCE, '*');
+
+	  sprintf(cksumHex, "%X",cksum);
+	  count = strlen(cksumHex);
+	  for(uint8_t i = 0; i < count; i++){
+          // ★ 修正: USART_Tx -> uart_putc_raw ★
+		uart_putc_raw(PICO_PC_UART_INSTANCE, cksumHex[i]);
+	  };
+	  uart_putc_raw(PICO_PC_UART_INSTANCE, '\n');
+}//--------------------------------------------------------------------------------------------
 
 // 元の TX_IRQHandler は何もしないので削除または無視
 //--------------------------------------------------------------------------------------------
@@ -240,17 +317,4 @@ static void mad_uart1_rx_irq_handler(void)
     }
 }
 
-// mad_usart.c の末尾に追記する定義本体
-
-// mad_USART0_RxCkSumCheck4char の定義 (元のコードより)
-bool mad_USART0_RxCkSumCheck4char(void)
-{
-    if(mad_UART0_RX_BUF.data[0] != 'C')	return false;
-    uint8_t cksum;
-	cksum=mad_UART0_RX_BUF.data[0];
-    cksum += mad_UART0_RX_BUF.data[1];
-    cksum += mad_UART0_RX_BUF.data[2];
-    if(cksum == mad_UART0_RX_BUF.data[3])	return true;
-    return false;
-}
 //--------------------------------------------------------------------------------------------

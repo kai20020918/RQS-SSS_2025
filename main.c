@@ -14,12 +14,10 @@
 #include "hal/mad_system.h" // mad_SYSTEM_INIT はもう不要かも？
 #include "hal/mad_adxl355.h" // ADXL355 を使うのでインクルード
 #include "hal/rp2350_pin_config.h" // PIN_LED_CONNECT などを使うため
+#include "hal/mad_gps.h"
+#include "mad_usart.h"
 
-// --- UART 設定定数 (printf 用) ---
-#define UART_ID     uart0
-#define BAUD_RATE   115200
-#define UART_TX_PIN 0
-#define UART_RX_PIN 1
+
 
 // --- 関数プロトタイプ ---
 void MainLoop(void);
@@ -27,35 +25,41 @@ void MainLoop(void);
 // --- メインエントリーポイント ---
 int main(void)
 {
-    // --- 手動 UART stdio 初期化 ---
-
-    // --- ここまで ---
-
-    // GPIO 初期化 (Lチカや ADXL355 が使う前に必要)
-    // mad_SYSTEM_INIT() を呼ぶ代わりに、mad_GPIO_Init() を直接呼ぶ
-    // ※mad_SYSTEM_INIT() は stdio_init_all() を呼んでいたのでもう不要
-    mad_GPIO_Init();
-
-    // 念のため少し待つ
-    sleep_ms(100);
-
+    // ★ 1. SYSTEM_INIT を呼び出す ★
+    // (内部で UART0 for printf @ 921600bps と mad_GPIO_Init が実行される)
 	mad_SYSTEM_INIT();
+    sleep_ms(100); // UART 初期化待ち
 
-    // printf("--- UART Initialized. Initializing ADXL355... ---\n");
-    // fflush(stdout);
+    printf("--- System Init (UART0 + GPIO) Done ---\n");
+    fflush(stdout);
 
-    // ★ ADXL355 初期化 ★
+    // ★ 2. ADXL355 初期化 ★
     mad_ADXL355_Init();
+    printf("--- ADXL355 Init Done ---\n");
+    fflush(stdout);
 
-    // printf("--- ADXL355 Initialized! Entering MainLoop... ---\n");
-    // fflush(stdout);
+    // ★ 3. GPS (UART1) 初期化 ★
+    mad_GPS_INIT(); // 内部で mad_USART1_INIT(9600) が呼ばれる
+    printf("--- GPS Init (UART1 TX) Done ---\n");
+    fflush(stdout);
+
+    // ★ 4. PC コマンド受信 (UART0) 開始 ★
+    mad_USART0_INIT(921600); // UART0 の受信割り込みのみ設定
+    printf("--- PC Command RX (UART0 IRQ) Started ---\n");
+    fflush(stdout);
+
+    // ★ 5. GPS 受信 (UART1) 開始 ★
+    mad_USART1_RxStart(); // UART1 の受信割り込みを有効化
+    printf("--- GPS RX (UART1 IRQ) Started ---\n");
+    fflush(stdout);
 
     // メインループへ
+    printf("Entering MainLoop...\n");
+    fflush(stdout);
     MainLoop();
 
     return 0; // 到達しない
 }
-
 // --- メインループ (ADXL355 データ読み取りテスト) ---
 void MainLoop(void)
 {
@@ -109,7 +113,21 @@ void MainLoop(void)
             sleep_ms(50);
             mad_GPIO_Clr(mad_GPIO_LED_4); // エラーLED 消灯
         }
-        fflush(stdout); // 出力を確実にターミナルに送る
+        // fflush(stdout); // 出力を確実にターミナルに送る
+
+        if(!mad_UART1_RX_BUF.empty){
+            printf("GPS Data:");
+            printf("%s",mad_UART1_RX_BUF.data);
+
+            mad_USART1_RxBufClr();
+
+        }else{
+            printf("GPS Dat : ------\n");
+
+
+        }
+
+        fflush(stdout);
 
     } // end while(1)
 } // end MainLoop

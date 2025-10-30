@@ -9,9 +9,9 @@
 
 #include "stdint.h"
 #include "stdlib.h"
-#include "hal/mad_timer.h"
+#include "mad_timer.h"
 // #include "hal/mad_flash.h"
-#include "hal/mad_gpio.h"
+#include "mad_gpio.h"
 // #include "hal/mad_usart.h"
 //#include "mad\mad_M24M01.h"
 // #include "mad\mad_gpstx.h"
@@ -135,16 +135,16 @@ typedef struct {
 }GPS_INT;
 
 
-uint8_t mad_GPS_DATA_MEM[16];		//�������ۑ��p�̃o�b�t�@
+extern uint8_t mad_GPS_DATA_MEM[16];		//�������ۑ��p�̃o�b�t�@
 
 
 
 
 
-GPS_INT		mad_GPS_INT;
-GPS_DATA	mad_GPS_DATA, mad_GPS_DATA_backup;
+extern GPS_INT		mad_GPS_INT;
+extern GPS_DATA	mad_GPS_DATA, mad_GPS_DATA_backup;
 
-uint32_t		mad_GPS_TX_DATA[16];
+extern uint32_t		mad_GPS_TX_DATA[16];
 
 
 

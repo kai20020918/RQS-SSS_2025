@@ -25,7 +25,6 @@ add_subdirectory(hal)
 # 2. メインの実行ファイル (main.c と、ロジック部の .c)
 add_executable(${CMAKE_PROJECT_NAME}
     main.c
-    # mad_gps.c
 )
 
 # 9. メインの実行ファイルに、移植したHALライブラリをリンクする

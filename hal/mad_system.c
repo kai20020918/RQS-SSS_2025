@@ -17,32 +17,29 @@ time_t	mad_SYSTEM_TIME;
 //--------------------------------------------------------------------------------------------
 void mad_SYSTEM_INIT(void)
 {
-    // 元: CHIP_Init(); CMU_ClockEnable(cmuClock_GPIO, true);
-    // Pico SDKの初期化
-    stdio_init_all();
+    // stdio_init_all(); // ★ 削除 (手動初期化と重複するため) ★
     
-    // --- 手動 UART stdio 初期化 ---
-    uart_init(PICO_PC_UART_INSTANCE, 921600);
-    gpio_set_function(PIN_PC_UART_TX, GPIO_FUNC_UART);
-    gpio_set_function(PIN_PC_UART_RX, GPIO_FUNC_UART);
-    stdio_uart_init_full(PICO_PC_UART_INSTANCE, 921600, PIN_PC_UART_TX, PIN_PC_UART_RX);
+    // --- 手動 UART stdio 初期化 (printf 用 - UART0) ---
+    // CM4/PC との通信ボーレート (921600 bps)
+    uint actual_baudrate = uart_init(PICO_PC_UART_INSTANCE, 921600);
+    
+    if (actual_baudrate > 0) {
+        gpio_set_function(PIN_PC_UART_TX, GPIO_FUNC_UART);
+        gpio_set_function(PIN_PC_UART_RX, GPIO_FUNC_UART);
+        stdio_uart_init_full(PICO_PC_UART_INSTANCE, 921600, PIN_PC_UART_TX, PIN_PC_UART_RX);
+    }
+    // (printf はこの関数が完了した後から使用可能になる)
 
     // GPIO初期化
     mad_GPIO_Init();
     
-    // クロック設定 (RP2350は通常125MHzで動作開始するが、元の40MHzに近い値に設定)
-    // Pico SDKはデフォルトで高周波数に設定するため、クロック設定は省略またはデフォルトを維持
-
-    // 元の40MHzに相当する値を設定
+    // 元の40MHzに相当する値を設定 (pico-sdk のクロック設定とは異なるため注意)
     SYSTEMCLOCK = 40000000; 
 
     // 元: halInit(); // Initialize the system clocks and other HAL components
-
     // RTCC、CMUなどの設定はRP2350のアーキテクチャでは不要なため削除
-
     // mad_FLASH_READ();
-}
-//--------------------------------------------------------------------------------------------
+}//--------------------------------------------------------------------------------------------
 // クロック/省電力関数の置き換え (RP2350の特性に合わせて簡略化/削除)
 // RP2350はクロック変更が容易でないため、一部をダミー化またはメインクロックを維持
 void mad_SYSTEM_LFXO(void)

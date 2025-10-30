@@ -7,6 +7,7 @@ add_library(hal_lib
     mad_system.c
     mad_adxl355.c
     mad_usart.c
+    mad_gps.c
 )
 
 # このディレクトリ (hal/) もインクルードパスに追加

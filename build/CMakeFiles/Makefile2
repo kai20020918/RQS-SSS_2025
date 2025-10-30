@@ -1930,7 +1930,7 @@ CMakeFiles/RQS-SSS_2025.dir/all: hal/CMakeFiles/hal_lib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RQS-SSS_2025.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 92
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 91
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RQS-SSS_2025.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 0
 .PHONY : CMakeFiles/RQS-SSS_2025.dir/rule
@@ -1951,12 +1951,12 @@ CMakeFiles/RQS-SSS_2025.dir/clean:
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/all:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pico2/RQS-SSS_2025/build/CMakeFiles --progress-num=43,44 "Built target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pico2/RQS-SSS_2025/build/CMakeFiles --progress-num=43 "Built target bs2_default"
 .PHONY : pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/rule
@@ -1977,7 +1977,7 @@ pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/clean:
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/build.make pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pico2/RQS-SSS_2025/build/CMakeFiles --progress-num= "Built target bs2_default_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pico2/RQS-SSS_2025/build/CMakeFiles --progress-num=44 "Built target bs2_default_bin"
 .PHONY : pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2008,7 +2008,7 @@ pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/all: pico-sdk
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
@@ -2112,7 +2112,7 @@ hal/CMakeFiles/hal_lib.dir/all: pico-sdk/src/rp2350/boot_stage2/CMakeFiles/bs2_d
 
 # Build rule for subdir invocation for target.
 hal/CMakeFiles/hal_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 50
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 49
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hal/CMakeFiles/hal_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pico2/RQS-SSS_2025/build/CMakeFiles 0
 .PHONY : hal/CMakeFiles/hal_lib.dir/rule

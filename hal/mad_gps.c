@@ -50,33 +50,33 @@ void	mad_GPS_INIT(void)
 
 	int	i;
     // --- ▼▼▼ printf デバッグ (ラベル修正) ▼▼▼ ---
-    printf("GPS_INIT: Checkpoint 1 - Before GPGSA loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 1 - Before GPGSA loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGSA_OFF[i]);
-    printf("GPS_INIT: Checkpoint 2 - After GPGSA loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 2 - After GPGSA loop\n"); fflush(stdout);
 
-    printf("GPS_INIT: Checkpoint 3 - Before GPGSV loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 3 - Before GPGSV loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGSV_OFF[i]);
-    printf("GPS_INIT: Checkpoint 4 - After GPGSV loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 4 - After GPGSV loop\n"); fflush(stdout);
 
-    printf("GPS_INIT: Checkpoint 5 - Before GPGLL loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 5 - Before GPGLL loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGLL_OFF[i]);
-    printf("GPS_INIT: Checkpoint 6 - After GPGLL loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 6 - After GPGLL loop\n"); fflush(stdout);
 
-    printf("GPS_INIT: Checkpoint 7 - Before GPRMC loop\n"); fflush(stdout);	
+    // printf("GPS_INIT: Checkpoint 7 - Before GPRMC loop\n"); fflush(stdout);	
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPRMC_OFF[i]);
-    printf("GPS_INIT: Checkpoint 8 - After GPRMC loop\n"); fflush(stdout);	
+    // printf("GPS_INIT: Checkpoint 8 - After GPRMC loop\n"); fflush(stdout);	
 
-    printf("GPS_INIT: Checkpoint 9 - Before GPVTG loop\n"); fflush(stdout);	
+    // printf("GPS_INIT: Checkpoint 9 - Before GPVTG loop\n"); fflush(stdout);	
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPVTG_OFF[i]);
-    printf("GPS_INIT: Checkpoint 10 - After GPVTG loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 10 - After GPVTG loop\n"); fflush(stdout);
 
-	printf("GPS_INIT: Checkpoint 11 - Before GPGGA_OFF loop\n"); fflush(stdout);
+	// printf("GPS_INIT: Checkpoint 11 - Before GPGGA_OFF loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPGGA_OFF[i]);
-    printf("GPS_INIT: Checkpoint 12 - After GPGGA_OFF loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 12 - After GPGGA_OFF loop\n"); fflush(stdout);
 
-    printf("GPS_INIT: Checkpoint 13 - Before GPZDA_ON loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 13 - Before GPZDA_ON loop\n"); fflush(stdout);
 	for(i = 0; i<16 ; i++)	mad_USART1_TxChar(GPZDA_ON[i]);
-    printf("GPS_INIT: Checkpoint 14 - After GPZDA_ON loop\n"); fflush(stdout);
+    // printf("GPS_INIT: Checkpoint 14 - After GPZDA_ON loop\n"); fflush(stdout);
     // --- ▲▲▲ printf デバッグ (ラベル修正) ▲▲▲ ---
 }
 
@@ -622,7 +622,4 @@ void	mad_GPS_OFF(void)
 	// GPIO_PinModeSet(gpioPortD, 9, gpioModeDisabled, 1);		//TxD
 	// GPIO_PinModeSet(gpioPortD, 10, gpioModeDisabled, 0);		//RxD
 }
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------
 //--------------------------------------------------------------------------------------------

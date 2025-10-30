@@ -13,7 +13,7 @@
 /* Declare a circular buffer structure to use for Rx and Tx queues */
 // mad_usart.h に含まれるべき定義（仮定）
 
-#define UART1_BUFFERSIZE 512 // GPS用
+#define UART1_BUFFERSIZE 2048 // GPS用
 #define UART0_BUFFERSIZE 512  // PC用
 
 

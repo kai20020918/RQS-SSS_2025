@@ -27,8 +27,8 @@
 
 // === UART (GPS) ===
 #define PICO_GPS_UART_INSTANCE  uart1
-#define PIN_GPS_UART_TX         4
-#define PIN_GPS_UART_RX         5
+#define PIN_GPS_UART_TX         5
+#define PIN_GPS_UART_RX         4
 
 // === 割当不明なピン (TODO: 必要ならピン番号を割り当て) ===
 #define PIN_OUT_1     -1

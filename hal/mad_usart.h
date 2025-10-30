@@ -36,6 +36,7 @@ typedef struct {
 
 extern mad_UART0_RX_BUF_t mad_UART0_RX_BUF; // PC用
 extern mad_UART1_RX_BUF_t mad_UART1_RX_BUF; // GPS用
+extern volatile int g_uart1_irq_count; // UART1 IRQ デバッグ用カウンター
 
 //--------------------------------------------------------------------------------------------
 void	mad_USART0_INIT(uint64_t baudrate);
@@ -64,5 +65,7 @@ void	mad_USART0_RxStop(void);
 
 void	mad_USART0_TxPrompt(void);
 void	mad_USART0_TxError(void);
+
+
 
 #endif

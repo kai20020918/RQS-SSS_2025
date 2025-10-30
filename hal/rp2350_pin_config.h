@@ -2,7 +2,7 @@
 #ifndef _RP2350_PIN_CONFIG_H
 #define _RP2350_PIN_CONFIG_H
 
-#include "hardware/uart.h"
+// #include "hardware/uart.h"
 
 // === LEDピン ===
 #define PIN_LED_CONNECT 12

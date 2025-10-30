@@ -232,21 +232,21 @@ bool mad_ADXL355_GetData(void) {
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_x_mid[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_x_lsb[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     // ★ デバッグ出力: 生データ (X軸) ★
-    printf("Raw CH1 X: 0x%02X 0x%02X 0x%02X | ", raw_x[CH1], raw_x_mid[CH1], raw_x_lsb[CH1]);
+    // printf("Raw CH1 X: 0x%02X 0x%02X 0x%02X | ", raw_x[CH1], raw_x_mid[CH1], raw_x_lsb[CH1]);
 
     // --- Y軸 (3バイト読み出し) ---
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_y[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_y_mid[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_y_lsb[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     // ★ デバッグ出力: 生データ (Y軸) ★
-    printf("Y: 0x%02X 0x%02X 0x%02X | ", raw_y[CH1], raw_y_mid[CH1], raw_y_lsb[CH1]);
+    // printf("Y: 0x%02X 0x%02X 0x%02X | ", raw_y[CH1], raw_y_mid[CH1], raw_y_lsb[CH1]);
 
     // --- Z軸 (3バイト読み出し) ---
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_z[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     mad_ADXL355_4ch_Read(); mad_ADXL355_ACK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_z_mid[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     mad_ADXL355_4ch_Read(); mad_ADXL355_NAK_Out(); for(int c=0; c<ADXL355_CH; c++) raw_z_lsb[c] = (uint8_t)ADXL355_BYTE_DATA[c];
     // ★ デバッグ出力: 生データ (Z軸) ★
-    printf("Z: 0x%02X 0x%02X 0x%02X\n", raw_z[CH1], raw_z_mid[CH1], raw_z_lsb[CH1]);
+    // printf("Z: 0x%02X 0x%02X 0x%02X\n", raw_z[CH1], raw_z_mid[CH1], raw_z_lsb[CH1]);
     fflush(stdout); // Raw データ表示確定
 
     // --- 通信終了 ---
@@ -348,7 +348,7 @@ void mad_ADXL355_Init(void) {
 #ifdef SPS100
     mad_TIMER1_INIT(40000, 10);
 #endif
-    mad_TIMER1_ENABLE();
-    // printf("Timer ENABLE complete.\n"); // main 関数で Init 完了後に出力
+    // mad_TIMER1_ENABLE();
+    printf("Timer ENABLE complete.\n"); // main 関数で Init 完了後に出力
 }
 //--------------------------------------------------------------------------------------------

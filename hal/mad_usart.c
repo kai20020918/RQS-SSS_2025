@@ -27,6 +27,7 @@ static void mad_uart1_rx_irq_handler(void);
 extern mad_UART0_RX_BUF_t mad_UART0_RX_BUF;
 extern mad_UART1_RX_BUF_t mad_UART1_RX_BUF;
 
+volatile int g_uart1_irq_count = 0; // UART1 IRQ デバッグ用カウンターの実体をここで定義
 
 mad_UART0_RX_BUF_t mad_UART0_RX_BUF = {
     .data = {0},
@@ -246,6 +247,7 @@ void	mad_USART0_TxStrCksum(char *data)
 static void mad_uart0_rx_irq_handler(void)
 {
     // 受信バッファが空になるまで読み出す
+    g_uart1_irq_count++;
     while (uart_is_readable(PICO_PC_UART_INSTANCE)) {
         char ch = uart_getc(PICO_PC_UART_INSTANCE); 
         

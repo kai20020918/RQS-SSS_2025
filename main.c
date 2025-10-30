@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include "hardware/irq.h"
 
 // --- HAL Includes ---
 #include "hal/mad_gpio.h"
@@ -48,9 +49,20 @@ int main(void)
     // fflush(stdout);
 
     // ★ 5. GPS 受信 (UART1) 開始 → IRQ を使わないのでコメントアウト ★
-    // mad_USART1_RxStart(); 
-    // printf("--- GPS RX (UART1 IRQ) Started ---\n");
-    // fflush(stdout);
+    mad_USART1_RxStart(); 
+    printf("--- GPS RX (UART1 IRQ) Started ---\n");
+    fflush(stdout);
+
+    irq_handler_t installed_handler = irq_get_vtable_handler(UART1_IRQ);
+    printf("Installed UART1 IRQ handler address: %p\n", installed_handler);
+    // mad_uart1_rx_irq_handler のアドレスも表示して比較したいが、
+    // static なので直接は難しい。NULL でないことを確認するだけでも有効。
+    if (installed_handler != NULL) {
+        printf("Handler seems to be installed.\n");
+    } else {
+        printf("ERROR: Handler is NULL!\n");
+    }
+
 
     // メインループへ
     printf("Entering MainLoop... (Polling Mode)\n");
@@ -78,9 +90,13 @@ void MainLoop(void)
 
     // ★ 無限ループでデータを読み取り続ける ★
     while(1) {
+        if(loop_count==1){
+
+        }
         // 例: 200ms ごとに読み取り (5Hz)
-        sleep_ms(200);
+        sleep_ms(1000);
         loop_count++;
+
 
         // データを取得
         bool success = mad_ADXL355_GetData();
@@ -101,7 +117,7 @@ void MainLoop(void)
                        mad_ADXL_355_ERROR_CH3 ? "3" : "",
                        mad_ADXL_355_ERROR_CH4 ? "4" : "");
             }
-            // printf("\n"); // ★ 改行を削除 ★
+            printf("\n"); // ★ 改行を削除 ★
         } else {
             printf("[%lu] ADXL355 GetData Failed", loop_count);
             mad_GPIO_Set(mad_GPIO_LED_4); sleep_ms(50); mad_GPIO_Clr(mad_GPIO_LED_4);
@@ -121,6 +137,7 @@ void MainLoop(void)
         } else {
              printf("GPS Data: --- \n"); // データがない場合のみ改行
         }
+
         
         fflush(stdout); // 1ループ分の出力をまとめてフラッシュ
     } // end while(1)

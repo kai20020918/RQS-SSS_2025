@@ -57,6 +57,7 @@ void mad_USART0_RxBufClr(void){
     mad_UART0_RX_BUF.enter = 0;
     // data配列のサイズは mad_UART0_RX_BUF の定義による
     memset(mad_UART0_RX_BUF.data, 0x00, sizeof(mad_UART0_RX_BUF.data)); 
+    restore_interrupts(saved_irq); // ★★★ この行を追加 ★★★
 }
 //--------------------------------------------------------------------------------------------
 void mad_USART1_RxBufClr(void){   
@@ -66,6 +67,7 @@ void mad_USART1_RxBufClr(void){
     mad_UART1_RX_BUF.overflow = false;
     mad_UART1_RX_BUF.enter = 0;
     memset(mad_UART1_RX_BUF.data, 0x00, sizeof(mad_UART1_RX_BUF.data));
+    restore_interrupts(saved_irq); // ★★★ この行を追加 ★★★
 }
 //--------------------------------------------------------------------------------------------
 void mad_USART1_INIT(uint64_t baudrate){
@@ -292,31 +294,40 @@ static void mad_uart0_rx_irq_handler(void)
     }
 }
 //--------------------------------------------------------------------------------------------
-// UART1 受信割り込みハンドラ (GPS通信用)
+// (バッファオーバーランとIRQストームを両方防ぐ v3 ロジック)
 //--------------------------------------------------------------------------------------------
 static void mad_uart1_rx_irq_handler(void)
 {
+    // (デバッグ用カウンタ - 必要ならコメント解除)
+    // g_uart1_irq_count++;
+
+    // FIFOが空になるまでデータを読み出し続ける
     while (uart_is_readable(PICO_GPS_UART_INSTANCE)) {
+        
+        // (1) データをFIFOから読み出す (IRQフラグをクリアするために必須)
         char ch = uart_getc(PICO_GPS_UART_INSTANCE); 
-        
-        mad_UART1_RX_BUF.empty = false;
-        
-        // オーバーフロー/エラーなら処理を停止
-        if (mad_UART1_RX_BUF.overflow == true) return; 
 
-        // データコピー
-        mad_UART1_RX_BUF.data[mad_UART1_RX_BUF.index] = ch; 
+        // (2) 現在のインデックスが、バッファの *サイズ未満* かどうかをチェック
+        // (sizeof(mad_UART1_RX_BUF.data) は 2048)
+        if (mad_UART1_RX_BUF.index < sizeof(mad_UART1_RX_BUF.data)) {
+            
+            // (3) 安全な場合のみ、バッファにデータを書き込む
+            mad_UART1_RX_BUF.data[mad_UART1_RX_BUF.index] = ch;
+            mad_UART1_RX_BUF.empty = false;
         
-        // LF ('\n' = 0x0a) で Enter カウンタを増やす元のロジック
-        if (ch == 0x0a)
-            mad_UART1_RX_BUF.enter ++; 
-
-        mad_UART1_RX_BUF.index++;
+            if (ch == 0x0a) // '\n' (LF)
+                mad_UART1_RX_BUF.enter ++;
+    
+            // (4) データを書き込んだ後にインデックスを進める
+            mad_UART1_RX_BUF.index++; 
         
-        // バッファサイズ超過でオーバーフロー
-        if(mad_UART1_RX_BUF.index == sizeof(mad_UART1_RX_BUF.data))
-             mad_UART1_RX_BUF.overflow = true; 
+        } else {
+            // (5) インデックスがバッファサイズに達している (>= 2048)
+            //     これはオーバーフロー。フラグを立てる。
+            //     データは書き込まない (捨てる)。
+            mad_UART1_RX_BUF.overflow = true;
+        }
+        
+        // (ch は (1) で読み出し済みなので、ループが回る限り IRQ ストームは発生しない)
     }
 }
-
-//--------------------------------------------------------------------------------------------

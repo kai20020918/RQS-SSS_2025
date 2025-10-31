@@ -65,7 +65,7 @@ int main(void)
 
 
     // メインループへ
-    printf("Entering MainLoop... (Polling Mode)\n");
+    printf("Entering MainLoop... \n");
     fflush(stdout);
     MainLoop();
 
@@ -125,15 +125,19 @@ void MainLoop(void)
 
         printf(" | "); // GPS データとの区切り
 
-        // --- ★ GPS データ受信確認 (正しいポーリング方式) ★ ---
-        if (uart_is_readable(PICO_GPS_UART_INSTANCE)) {
-            printf("GPS Data: ");
-            // 読めるデータがなくなるまで読み出す
-            while (uart_is_readable(PICO_GPS_UART_INSTANCE)) {
-                gps_char = uart_getc(PICO_GPS_UART_INSTANCE);
-                printf("%c", gps_char); // 1文字ずつ UART0 (CM4) に出力
-            }
-            // (NMEA センテンスは '\n' で改行されるので、ここでは改行しない)
+     // --- ★ GPS データ受信確認 (割り込みバッファ方式) ★ ---
+        if (mad_UART1_RX_BUF.enter > 0) {
+            
+            char local_gps_buffer[UART1_BUFFERSIZE]; // mad_usart.h の定義に合わせる
+            
+            // 割り込みを一時停止してバッファを安全にコピー
+            uint32_t saved_irq = save_and_disable_interrupts();
+            strcpy(local_gps_buffer, mad_UART1_RX_BUF.data);
+            mad_USART1_RxBufClr(); // バッファをクリア（enter も 0 に戻る）
+            restore_interrupts(saved_irq);
+
+            printf("GPS Data: %s", local_gps_buffer); // local_buffer には \n が含まれているはず
+        
         } else {
              printf("GPS Data: --- \n"); // データがない場合のみ改行
         }

@@ -71,39 +71,39 @@ void mad_USART1_RxBufClr(void){
 }
 //--------------------------------------------------------------------------------------------
 void mad_USART1_INIT(uint64_t baudrate){
-    printf("mad_USART1_INIT: Starting (for GPS - uart1) with requested baudrate %lu...\n", (uint32_t)baudrate);
-    fflush(stdout);
+    // printf("mad_USART1_INIT: Starting (for GPS - uart1) with requested baudrate %lu...\n", (uint32_t)baudrate);
+    // fflush(stdout);
 
     // ★★★ 修正: PICO_GPS_UART_INSTANCE (uart1) を使う ★★★
     uint actual_baudrate = uart_init(PICO_GPS_UART_INSTANCE, (uint32_t)baudrate);
-    printf("mad_USART1_INIT: uart_init done. Actual baudrate: %u\n", actual_baudrate);
-    fflush(stdout);
+    // printf("mad_USART1_INIT: uart_init done. Actual baudrate: %u\n", actual_baudrate);
+    // fflush(stdout);
 
     if (actual_baudrate == 0) {
-        printf("mad_USART1_INIT: Failed to set baudrate!\n"); fflush(stdout);
+        // printf("mad_USART1_INIT: Failed to set baudrate!\n"); fflush(stdout);
         return; // 初期化失敗
     }
 
     // --- ピン機能設定 (GPSピン) ---
     gpio_set_function(PIN_GPS_UART_TX, GPIO_FUNC_UART);
-    printf("mad_USART1_INIT: gpio_set_function TX done.\n"); fflush(stdout);
+    // printf("mad_USART1_INIT: gpio_set_function TX done.\n"); fflush(stdout);
     gpio_set_function(PIN_GPS_UART_RX, GPIO_FUNC_UART);
-    printf("mad_USART1_INIT: gpio_set_function RX done.\n"); fflush(stdout);
+    // printf("mad_USART1_INIT: gpio_set_function RX done.\n"); fflush(stdout);
 
     // --- ★★★ 修正: stdio_uart_init_full は UART0 用なのでここでは呼ばない ★★★ ---
     
     // --- IRQ 関連 (UART1) ---
     int uart_irq = (PICO_GPS_UART_INSTANCE == uart0) ? UART0_IRQ : UART1_IRQ; // UART1_IRQ
     irq_set_exclusive_handler(uart_irq, mad_uart1_rx_irq_handler);
-    printf("mad_USART1_INIT: irq_set_exclusive_handler done.\n"); fflush(stdout);
+    // printf("mad_USART1_INIT: irq_set_exclusive_handler done.\n"); fflush(stdout);
     irq_set_enabled(uart_irq, true);
-    printf("mad_USART1_INIT: irq_set_enabled done.\n"); fflush(stdout);
+    // printf("mad_USART1_INIT: irq_set_enabled done.\n"); fflush(stdout);
     
     uart_set_irq_enables(PICO_GPS_UART_INSTANCE, false, false); // 受信は RxStart で開始
-    printf("mad_USART1_INIT: uart_set_irq_enables done.\n"); fflush(stdout);
+    // printf("mad_USART1_INIT: uart_set_irq_enables done.\n"); fflush(stdout);
 
     mad_USART1_RxBufClr();
-    printf("mad_USART1_INIT: RxBufClr done. Finished.\n"); fflush(stdout);
+    // printf("mad_USART1_INIT: RxBufClr done. Finished.\n"); fflush(stdout);
 }//--------------------------------------------------------------------------------------------
 void mad_USART0_RxStart(void)
 {
@@ -132,8 +132,8 @@ void mad_USART1_RxStop(void)
 //--------------------------------------------------------------------------------------------
 void mad_USART0_INIT(uint64_t baudrate)
 {
-    printf("mad_USART0_INIT: Setting up RX Interrupt for UART0 (stdio)...\n");
-    fflush(stdout);
+    // printf("mad_USART0_INIT: Setting up RX Interrupt for UART0 (stdio)...\n");
+    // fflush(stdout);
     
     // 1. UARTペリフェラルとピンの初期化は mad_SYSTEM_INIT が stdio 用に実行済み
     //    ここでは何もしない (重複呼び出しを避ける)
@@ -141,14 +141,14 @@ void mad_USART0_INIT(uint64_t baudrate)
     // 2. 割り込みハンドラの登録と有効化
     irq_set_exclusive_handler(UART0_IRQ, mad_uart0_rx_irq_handler);
     irq_set_enabled(UART0_IRQ, true);
-    printf("mad_USART0_INIT: IRQ handler set.\n");
-    fflush(stdout);
+    // printf("mad_USART0_INIT: IRQ handler set.\n");
+    // fflush(stdout);
 
     // 3. 受信バッファのクリアと受信開始
     mad_USART0_RxBufClr();
     mad_USART0_RxStart(); // PC からのコマンド受信をすぐに開始
-    printf("mad_USART0_INIT: RX Buffer cleared and RX started.\n");
-    fflush(stdout);
+    // printf("mad_USART0_INIT: RX Buffer cleared and RX started.\n");
+    // fflush(stdout);
 }
 //--------------------------------------------------------------------------------------------
 // (mad_USART0_RxCkSumCheck, mad_USART0_RxCkSumCheck4char, mad_USART0_TxErrorはそのまま)

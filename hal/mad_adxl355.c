@@ -318,7 +318,7 @@ void mad_ADXL355_Init(void) {
     mad_ADXL355_Stop(); // Send Stop condition first
     sleep_ms(1);        // ★ 電源投入後/Stop後の安定待ち時間 ★
 
-    printf("Attempting ADXL355 Init Sequence...\n"); fflush(stdout);
+    // printf("Attempting ADXL355 Init Sequence...\n"); fflush(stdout);
 
     // ★ Init 時の Write の戻り値をチェックし、失敗したら return する ★
     if (!mad_ADXL355_BYTE_WRITE(0x2F, 0x52)) {
@@ -339,7 +339,7 @@ void mad_ADXL355_Init(void) {
     if (!mad_ADXL355_BYTE_WRITE(0x2D, 0x00)) { printf("Init Error: PowerCtrl failed (NAK)\n"); fflush(stdout); return; }
     busy_wait_ms(1);
 
-    printf("ADXL355 Init Sequence Sent SUCCESSFULLY.\n"); fflush(stdout); // ここまで到達すればコマンド送信は成功
+    // printf("ADXL355 Init Sequence Sent SUCCESSFULLY.\n"); fflush(stdout); // ここまで到達すればコマンド送信は成功
 
     // タイマー設定 (Init が成功した場合のみ設定)
 #ifdef SPS500
@@ -349,6 +349,6 @@ void mad_ADXL355_Init(void) {
     mad_TIMER1_INIT(40000, 10);
 #endif
     // mad_TIMER1_ENABLE();
-    printf("Timer ENABLE complete.\n"); // main 関数で Init 完了後に出力
+    // printf("Timer ENABLE complete.\n"); // main 関数で Init 完了後に出力
 }
 //--------------------------------------------------------------------------------------------

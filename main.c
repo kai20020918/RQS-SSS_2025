@@ -30,18 +30,18 @@ int main(void)
 	mad_SYSTEM_INIT();
     sleep_ms(100); 
 
-    printf("--- System Init (UART0 + GPIO) Done ---\n");
-    fflush(stdout);
+    // printf("--- System Init (UART0 + GPIO) Done ---\n");
+    // fflush(stdout);
 
     // ★ 2. ADXL355 初期化 ★
     mad_ADXL355_Init();
-    printf("--- ADXL355 Init Done ---\n");
-    fflush(stdout);
+    // printf("--- ADXL355 Init Done ---\n");
+    // fflush(stdout);
 
     // ★ 3. GPS (UART1) 初期化 ★
     mad_GPS_INIT(); // 内部で mad_USART1_INIT(9600) が呼ばれる
-    printf("--- GPS Init (UART1 TX) Done ---\n");
-    fflush(stdout);
+    // printf("--- GPS Init (UART1 TX) Done ---\n");
+    // fflush(stdout);
 
     // ★ 4. PC コマンド受信 (UART0) → 一時停止 ★
     // mad_USART0_INIT(921600); 
@@ -50,22 +50,22 @@ int main(void)
 
     // ★ 5. GPS 受信 (UART1) 開始 → IRQ を使わないのでコメントアウト ★
     mad_USART1_RxStart(); 
-    printf("--- GPS RX (UART1 IRQ) Started ---\n");
-    fflush(stdout);
+    // printf("--- GPS RX (UART1 IRQ) Started ---\n");
+    // fflush(stdout);
 
     irq_handler_t installed_handler = irq_get_vtable_handler(UART1_IRQ);
-    printf("Installed UART1 IRQ handler address: %p\n", installed_handler);
+    // printf("Installed UART1 IRQ handler address: %p\n", installed_handler);
     // mad_uart1_rx_irq_handler のアドレスも表示して比較したいが、
     // static なので直接は難しい。NULL でないことを確認するだけでも有効。
     if (installed_handler != NULL) {
-        printf("Handler seems to be installed.\n");
+        // printf("Handler seems to be installed.\n");
     } else {
-        printf("ERROR: Handler is NULL!\n");
+        // printf("ERROR: Handler is NULL!\n");
     }
 
 
     // メインループへ
-    printf("Entering MainLoop... \n");
+    // printf("Entering MainLoop... \n");
     fflush(stdout);
     MainLoop();
 
@@ -93,7 +93,7 @@ void MainLoop(void)
         if(loop_count==1){
 
         }
-        // 例: 200ms ごとに読み取り (5Hz)
+        // 例: 1000ms ごとに読み取り (5Hz)
         sleep_ms(1000);
         loop_count++;
 
